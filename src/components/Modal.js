@@ -14,7 +14,7 @@ class Modal extends React.Component {
                 <div className="modal-content" style={{ display: this.props.modalDisplay }}>
                     <button className="close" onClick={this.props.closeModal}>&times;</button>
                     <p>Some text in the Modal..</p>
-                    <h4>{this.props.modalContent(this.props.MethodDetails)}</h4>
+                    <h4>{this.props.MethodDetails}</h4>
                 </div>
 
         )

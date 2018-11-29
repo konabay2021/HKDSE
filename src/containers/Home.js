@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { calScore } from '../actions/index'
 import { bindActionCreators } from "redux";
 
+//Home page 
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -15,13 +16,17 @@ class Home extends Component {
     }
   }
 
+  // Send the inputted form to Action Creator
   handleFormSubmit = (event) => {
+    //Check if same subjects are not selected
     if (event.target.el1.value == event.target.el2.value || event.target.el2.value == event.target.el3.value || event.target.el1.value == event.target.el3.value) {
       this.setState({
         invalidSubjectInput: "Elective Should Not Be The Same!"
       })
     }
+    
     else {
+      //Push the core and elective inputted subject and score to the array 
       var inputScore = [
         { subject: "Chinese", score: parseInt(event.target.chiScore.value, 10) },
         { subject: "English", score: parseInt(event.target.engScore.value, 10) },
@@ -29,21 +34,24 @@ class Home extends Component {
         { subject: "LS", score: parseInt(event.target.lsScore.value, 10) },
         { subject: event.target.el1.value, score: parseInt(event.target.el1Score.value, 10) }
       ]
+       
       if (event.target.el2.value != "noEl2") {
+        //Push the 2nd elective inputted subject and score to the array 
         inputScore.push({ subject: event.target.el2.value, score: parseInt(event.target.el2Score.value, 10) })
       }
       if (event.target.el3.value != "noEl3") {
+        //Push the 3rd elective inputted subject and score to the array 
         inputScore.push({ subject: event.target.el3.value, score: parseInt(event.target.el3Score.value, 10) })
       }
-
+      //Send the data
       this.props.calScore(inputScore)
-      
       this.props.history.push("/result");
     }
     event.preventDefault();
 
   }
 
+  //disable some select elements if certain button is clicked 
   radioOnclick = (e) => {
     switch (e) {
       case 1:
@@ -71,11 +79,7 @@ class Home extends Component {
         })
         break;
     }
-
-    console.log()
   }
-
-
 
   render() {
     return (
@@ -91,11 +95,9 @@ class Home extends Component {
               <label className="btn btn-secondary " for="4C1X" onClick={() => this.radioOnclick(1)}>
                 <input type="radio" name="totalEl" id="4C1X" />4C1X
               </label>
-
               <label className=" btn btn-secondary" for="4C2X" onClick={() => this.radioOnclick(2)}>
                 <input type="radio" name="totalEl" id="4C2X" />4C2X
               </label>
-
               <label className=" btn btn-secondary active" for="4C3X" onClick={() => this.radioOnclick(3)}>
                 <input type="radio" name="totalEl" id="4C3X" />4C3X
               </label>

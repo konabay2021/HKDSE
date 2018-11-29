@@ -1,3 +1,6 @@
+//database, which should be using SQL database instead (improvement required)
+//improvement on database will be done asap
+
 export default function () {
     return [
         { Code: "JS5100" , Method: "UST A" , MedianScore: 23.5 , LQScore: 23 , Course: "Science"},

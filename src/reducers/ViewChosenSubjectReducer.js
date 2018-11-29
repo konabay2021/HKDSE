@@ -2,6 +2,7 @@ import { VIEW_CHOSEN_SUBJECT } from "../actions";
 
 var initialState = ["", "", "", "", "", "", ""]
 
+// A reducer to return the selected subjects which are used to calculate the weighted score as props to containers
 export default function (state = initialState, action) {
 
     switch (action.type) {
@@ -10,6 +11,8 @@ export default function (state = initialState, action) {
             var newState = action.payload
             var color = "#81c784";
             console.log(newState)
+
+            // map the user's inputted subject with the selected subjects which are used to calculate the weighted score 
             newState.subject.map((el) => {
                 switch (el) {
                     case newState.allScore[0].subject:
@@ -35,11 +38,8 @@ export default function (state = initialState, action) {
                         break;
                     default:
                         break;
-                }
-                
-                
+                }                       
             })
-            console.log(chosenSubject)
             return chosenSubject;
             break;
         default:

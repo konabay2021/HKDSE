@@ -1,3 +1,5 @@
+//database, which should be using SQL database instead (improvement required)
+//improvement on database will be done asap
 export default function () {
     return [
         { Code: "JS6004", Method: "Best 5", MedianScore: 25, LQScore: 24, Course: "BA(AS)", MinLevelRequired: "Testing-function" },

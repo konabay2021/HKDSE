@@ -15,6 +15,7 @@ class Result extends Component {
         };
     }
 
+    //submit the user editted score to action creator
     handleFormSubmit = (event) => {
         this.props.callScore.map((data, index) => {
             data.score = parseInt(event.target[index].value, 10)
@@ -24,6 +25,9 @@ class Result extends Component {
         this.setState({ edit: !this.state.edit });
     }
 
+    //set state to determine what to be done: 
+    //1) which uni score will be rendered to the screen when certain button is clicked
+    //2) display the form for user to edit their score when certain button is clicked
     handleClick = (e) => {
         switch (e) {
             case "HKU":
@@ -41,10 +45,12 @@ class Result extends Component {
         }
     }
 
+    //Pass the subjects and scores that are chosen in different calculation formula to Action Creator to display to the user which subjects are selected
     viewSubjectHandler = (subject, callScore) => {
         this.props.viewChosenSubject1(subject, callScore)
     }
 
+    //Lod the AdmissonScoreTable when the state are changed
     loadUniDataTable = () => {
         switch (this.state.render) {
             case "HKU":
@@ -67,6 +73,7 @@ class Result extends Component {
         }
     }
 
+    //dynamically load the user's inputted score
     loadInputScore = () => {
         return this.props.callScore.map((data, index) => {
             return (
@@ -78,6 +85,7 @@ class Result extends Component {
         })
     }
 
+    //Load a table for the user to edit their inputted score when the button "edit" is clicked
     loadEditScore = () => {
         let name = ["chiScore", "engScore", "mathScore", "lsScore", "el1Score", "el2Score", "el3Score"]
         return this.props.callScore.map((data, index) => {
@@ -101,7 +109,8 @@ class Result extends Component {
     }
 
     render() {
-        let scoreTable = (
+        // the score table that display the user inputted score
+        const scoreTable = (
             <div class="scoreTable paper">
                 <h4 className="tableTitle">Score Table:</h4>
                 <table>
@@ -116,7 +125,6 @@ class Result extends Component {
                     </tbody>
                 </table>
 
-
                 <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.cal4C2X(this.props.callScore).subject, this.props.callScore)} >4C 2X: {formula.cal4C2X(this.props.callScore).score} </h5>
                 <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.calBest5(this.props.callScore).subject, this.props.callScore)} >Best 5: {formula.calBest5(this.props.callScore).score} </h5>
                 <button className="btn  changeButton" onClick={(e) => this.handleClick(("ChangeScore"))}>Change Input Score</button>
@@ -125,8 +133,8 @@ class Result extends Component {
                 <button className="btn  schoolButton" onClick={(e) => this.handleClick(("HKUST"))}> HKUST</button>
             </div>
         )
-
-        let editScoreTable = (
+        // the table that allows the user to edit and submit the score again
+        const editScoreTable = (
             <div class="scoreTable paper">
                 <h4 className="tableTitle">Score Table:</h4>
                 <form onSubmit={this.handleFormSubmit.bind(this)}>

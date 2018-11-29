@@ -12,28 +12,19 @@ class AdmissionScoreTable extends Component {
             modalDisplay: "none",
             MethodDetails: ""
         }
-
     }
-
-
 
     eventHandler = (subject, callScore) => {
         this.props.viewChosenSubject(subject, callScore)
     }
 
+    //display modal when clicked
     displayModal = (MethodDetails) => {
         this.setState({
             modalDisplay: "block",
             MethodDetails: MethodDetails
         })
     }
-
-    modalContent = (MethodDetails) => {
-        return (
-            <div>{MethodDetails}</div>
-        )
-    }
-
 
     closeModal = () => {
         this.setState({
@@ -139,7 +130,7 @@ class AdmissionScoreTable extends Component {
                             modalDisplay={this.state.modalDisplay}
                             closeModal={this.closeModal}
                             MethodDetails={this.state.MethodDetails}
-                            modalContent={this.modalContent} />
+                             />
                     </div>
                 }
 

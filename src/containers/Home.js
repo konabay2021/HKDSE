@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { calScore } from '../actions/index'
 import { bindActionCreators } from "redux";
 
-//Home page 
+//Home page.
 class Home extends Component {
   constructor(props) {
     super(props);

@@ -167,7 +167,7 @@ class Home extends Component {
               <option value="m1/m2">Mathematics M1/M2</option>
               <option value="musc">Music</option>
               <option value="pe">Physical Education</option>
-              <option value="phy">Physics</option>
+              <option value="phy" selected>Physics</option>
               <option value="sciCom">Science: Combined Science</option>
               <option value="sciInt">Science: Integrated Science</option>
               <option value="tech">Technology and Living</option>
@@ -187,7 +187,7 @@ class Home extends Component {
             <select className="label4 form-control" id="el2" name="el2" disabled={this.state.Elective2}>
               <option value="bio" >Biology</option>
               <option value="bafs">Business, Accounting and Financial Studies</option>
-              <option value="chem">Chemistry</option>
+              <option value="chem" selected={!this.state.selected2}>Chemistry</option>
               <option value="chist">Chinese History</option>
               <option value="chiLit">Chinese Literature</option>
               <option value="desi">Design and Applied Technology</option>
@@ -220,11 +220,11 @@ class Home extends Component {
             </select>
 
             <select className="label6 form-control" id="el3" name="el3" disabled={this.state.Elective3}>
-              <option value="bio">Biology</option>
+              <option value="bio" selected={!this.state.selected3}>Biology</option>
               <option value="bafs">Business, Accounting and Financial Studies</option>
               <option value="chem">Chemistry</option>
               <option value="chist">Chinese History</option>
-              <option value="chiLit">Chinese Literature</option>
+              <option value="chiLit" >Chinese Literature</option>
               <option value="desi">Design and Applied Technology</option>
               <option value="econ">Economics</option>
               <option value="ers">Ethics and Religious Studies</option>
@@ -241,10 +241,10 @@ class Home extends Component {
               <option value="sciInt">Science: Integrated Science</option>
               <option value="tech">Technology and Living</option>
               <option value="ths">Tourism and Hospitality Studies</option>
-              <option value="va">Visual Arts</option>
-              <option value="noEl3" selected={this.state.selected3}>N/A</option>
+              <option value="va" >Visual Arts</option>
+              <option value="noEl3"  selected={this.state.selected3}>N/A</option>
             </select>
-            <select className="elBreak select6 form-control" name="el3Score" disabled={this.state.Elective2}>
+            <select className="elBreak select6 form-control" name="el3Score" disabled={this.state.Elective3}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>

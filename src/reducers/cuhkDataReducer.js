@@ -6,7 +6,7 @@ export default function () {
         { Code: "JS4018", Method: "Best 5", UQScore: 28, MedianScore: 27, LQScore: 26 , Course: "Chinese Language and Literature" },
         { Code: "JS4020", Method: "Best 5", UQScore: 24, MedianScore: 23, LQScore: 22 , Course: "Cultural Studies" },
         { Code: "JS4022", Method: "Best 5", UQScore: 24, MedianScore: 23, LQScore: 23 , Course: "Cultural Management" },
-        { Code: "JS4032", Method: "4C2X", UQS1core: 27, MedianScore: 27, LQScore: 26 , Course: "English" },
+        { Code: "JS4032", Method: "4C2X", UQScore: 27, MedianScore: 27, LQScore: 26 , Course: "English" },
         { Code: "JS4044", Method: "4C2X", UQScore: 31, MedianScore: 28, LQScore: 27 , Course: "Fine Arts" },
         { Code: "JS4056", Method: "Best 5", UQScore: 26, MedianScore: 25, LQScore: 24 , Course: "History" },
         { Code: "JS4068", Method: "Best 5", UQScore: 25, MedianScore: 24, LQScore: 24 , Course: "Japanese Studies" },

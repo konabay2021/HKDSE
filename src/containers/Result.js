@@ -127,6 +127,7 @@ class Result extends Component {
 
                 <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.cal4C2X(this.props.callScore).subject, this.props.callScore)} >4C 2X: {formula.cal4C2X(this.props.callScore).score} </h5>
                 <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.calBest5(this.props.callScore).subject, this.props.callScore)} >Best 5: {formula.calBest5(this.props.callScore).score} </h5>
+                <button className="btn  changeButton" onClick={() => this.props.history.push("/")}>Back To Home Page</button>
                 <button className="btn  changeButton" onClick={(e) => this.handleClick(("ChangeScore"))}>Change Input Score</button>
                 <button className="btn  schoolButton" onClick={(e) => this.handleClick(("HKU"))}>HKU</button>
                 <button className="btn  schoolButton" onClick={(e) => this.handleClick(("CUHK"))}> CUHK</button>

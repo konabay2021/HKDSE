@@ -95,7 +95,7 @@ word-wrap:break-word
   width: 100%
 }
 
-
+/* modal */
 
 .modalOutside{
   position: fixed; 
@@ -106,7 +106,6 @@ word-wrap:break-word
   height: 100%; 
   overflow: auto; 
   background-color: rgba(0,0,0,0.4); 
-  
   animation-name: fadeIn;
   animation-duration: 0.3s
   }
@@ -114,14 +113,22 @@ word-wrap:break-word
   .modal-content {
   position: fixed; 
   z-index: 1; 
-  background-color:  #DDDDDD;
-  margin: 35vh 5%;  /*  why vh work, % doesnt work? */
+  background-color: white;
+  margin: 15vh 10%;  /*  why vh work, % doesnt work? */
   padding: 20px;
-  width: 90%; /* Could be more or less, depending on screen size */
+  width: 80%; /* Could be more or less, depending on screen size */
   
   animation-name: slideIn;
   animation-duration: 0.3s
   }
+
+  .modalTable{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: auto;
+    background-color: white;
+    }
+
 
 /* The Modal Close Button */
 .close {

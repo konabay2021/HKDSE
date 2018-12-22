@@ -4,12 +4,14 @@
   "private": true,
   "homepage": "https://justinsochi.github.io/HKDSE/",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-onclickoutside": "^6.7.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
+    "react-sparklines": "^1.7.0",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2"
   },
@@ -30,5 +32,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
-
 }

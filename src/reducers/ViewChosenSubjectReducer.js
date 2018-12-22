@@ -10,7 +10,6 @@ export default function (state = initialState, action) {
             var chosenSubject = [ ...initialState ]
             var newState = action.payload
             var color = "#81c784";
-            console.log(newState)
 
             // map the user's inputted subject with the selected subjects which are used to calculate the weighted score 
             newState.subject.map((el) => {

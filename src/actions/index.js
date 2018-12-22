@@ -1,6 +1,7 @@
 export const CAL_SCORE = "CAL_SCORE";
 export const VIEW_CHOSEN_SUBJECT = "VIEW_CHOSEN_SUBJECT";
-export const DISPLAY_ERROR_MESSAGE = "DISPLAY_ERROR_MESSAGE"
+export const DISPLAY_ERROR_MESSAGE = "DISPLAY_ERROR_MESSAGE";
+export const UNI_DATA = "UNI_DATA"
 
 // pass the const payload to CalScoreReducer.js Reducer
 export function calScore(inputScore) {
@@ -20,6 +21,14 @@ export function viewChosenSubject(subject, allScore) {
 
     return {
         type: VIEW_CHOSEN_SUBJECT,
+        payload: payload
+    };
+}
+
+export function dataReducer(data) {
+    const payload = {...data}
+    return {
+        type: UNI_DATA,
         payload: payload
     };
 }

@@ -23,7 +23,36 @@ export const checkBasicRequirements = (minSubject, allScoretest) => {
 
 }
 
-
+export const calFormula = (score, method) => {
+    switch (method) {
+        case "Best 5":
+            return calBest5(score)
+        case "4C2X":
+            return cal4C2X(score)
+        case "Best 6":
+            return calBest6(score)
+        case "UST A":
+            return ustA(score)
+        case "UST B":
+            return ustB_I(score, "UST B")
+        case "UST C":
+            return ustC(score)
+        case "UST D":
+            return ustD(score)
+        case "UST E":
+            return ustE(score)
+        case "UST F":
+            return ustF(score)
+        case "UST G":
+            return ustG(score)
+        case "UST H":
+            return ustH(score)
+        case "UST I":
+            return ustB_I(score, "UST I")
+        default:
+            return "err"
+    }
+}
 
 
 export const calBest5 = (allScoretest) => {

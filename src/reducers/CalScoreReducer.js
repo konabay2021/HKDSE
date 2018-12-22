@@ -15,7 +15,6 @@ var initialState =  [
 
 // A reducer to return the user's inputted subject and electives as props to containers 
 export default function (state = initialState, action) {
-
   switch (action.type) {
     case CAL_SCORE: //when the user clicked the submit button to submit his/her inputted score and electives 
       let newState = [ ...initialState ]

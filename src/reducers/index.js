@@ -5,6 +5,7 @@ import hkuDataReducer from "./hkuDataReducer";
 import cuhkDataReducer from "./cuhkDataReducer";
 import hkustDataReducer from "./hkustDataReducer";
 import ViewChosenSubjectReducer from "./ViewChosenSubjectReducer";
+import UniDataReducer from "./UniDataReducer";
 
 //combine the reducers together 
 const rootReducer = combineReducers({
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
     hkuData: hkuDataReducer,
     cuhkData: cuhkDataReducer,
     hkustData: hkustDataReducer,
-    viewChosenSubject : ViewChosenSubjectReducer
+    viewChosenSubject: ViewChosenSubjectReducer,
+    uniData: UniDataReducer
     
 });
 

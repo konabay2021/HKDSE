@@ -1,0 +1,151 @@
+.homeContainer{
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  label, #homeRadio {
+    padding-top: 20px;
+  }
+  
+  .homeTitle{
+    margin-top: 2%;
+    text-align: center;
+  }
+  
+  select {
+    margin-bottom: 10px;
+  }
+  
+  .elBreak{
+    margin-bottom: 30px;
+  }
+
+  #submitButton{ 
+    margin-top:5%;
+    width: 100%
+  }
+
+  @media only screen and (min-width: 1024px) {
+  
+  .homeContainer{
+    display: flex;           
+    flex-direction: column;  
+    justify-content: center; 
+    height: 90vh;
+  }
+  
+  
+  
+  .homeInnerContainer{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10% 20% 8% 10% 36% 8% 10%;
+    grid-template-rows: 100px 50px 50px 50px 50px auto ;
+    grid-template-areas: 
+      " . radio radio . . . ."
+      ". label1 select1 . labelEL . ." 
+      ". label3 select3 . label2 select2 ."
+      ". label5 select5 . label4 select4 ."
+      ". label7 select7 . label6 select6 ."
+      ". submitButton submitButton submitButton submitButton submitButton .";
+  
+  }
+  #homeRadio{
+    align-self: center;
+    grid-area: radio;
+  }
+  .labelEL{
+    align-self: center;
+    grid-area: labelEL;
+  }
+  .label1 {
+    align-self: center;
+    grid-area: label1;
+  }
+  
+  .select1{
+    align-self: center;
+    grid-area: select1;
+  }
+  
+  .label2 {
+    align-self: center;
+    grid-area: label2;
+  }
+  
+  .select2{
+    align-self: center;
+    grid-area: select2;
+  }
+  
+  .label3 {
+    align-self: center;
+    grid-area: label3;
+  }
+  
+  .select3{
+    align-self: center;
+    grid-area: select3;
+  }
+  
+  .label4 {
+    align-self: center;
+    grid-area: label4;
+  }
+  
+  .select4{
+    align-self: center;
+    grid-area: select4;
+  }
+  
+  .label5 {
+    align-self: center;
+    grid-area: label5;
+  }
+  
+  .select5{
+    align-self: center;
+    grid-area: select5;
+  }
+  
+  .label6 {
+    align-self: center;
+    grid-area: label6;
+  }
+  
+  .select6{
+    align-self: center;
+    grid-area: select6;
+  }
+  
+  .label7 {
+    align-self: center;
+    grid-area: label7;
+  }
+  
+  .select7{
+    align-self: center;
+    grid-area: select7;
+  }
+  
+  .submitButton{
+    grid-area: submitButton;
+  }
+  
+  label {
+    padding-top: 0px;
+  }
+  
+  select {
+    margin-bottom: 0px;
+  }
+  
+  .elBreak{
+    margin-left: 10px;
+    margin-bottom: 0px;
+    
+  }
+  
+  
+  
+  }

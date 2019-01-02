@@ -1,0 +1,57 @@
+/* modal */
+
+    .modal-content {
+    max-height: calc(90vh);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed; 
+    z-index: 1; 
+    background-color: white;
+    margin: 5vh 10%;  /*  why vh work, % doesnt work? */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation-name: slideIn;
+    animation-duration: 0.3s
+    }
+
+    @keyframes slideIn {
+        from {top: -300px; opacity: 0}
+        to {top: 0; opacity: 1}
+      }
+  
+    .modalTable{
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      }
+  
+      .modalWidthTableWrapper{
+        overflow-x:auto;
+      }
+
+      .chart{
+        overflow-x:auto;
+        min-width: 1000px;
+      }
+  
+  
+  /* The Modal Close Button */
+  .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .modalTable{
+      width: 80%;
+      }
+  }

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { calScore } from '../actions/index'
 import { bindActionCreators } from "redux";
+import HomeCoreSelectOption from "../components/HomeCoreSelectOption";
+import HomeElSelectOption from "../components/HomeElSelectOption";
 import "./Home.css"
 
 //Home page.
@@ -10,6 +12,7 @@ class Home extends Component {
     super(props);
     this.state = {
       invalidSubjectInput: null,
+      type: "4C3X",
       Elective2: "",
       selected2: "",
       Elective3: "",
@@ -19,30 +22,37 @@ class Home extends Component {
 
   // Send the inputted form to Action Creator
   handleFormSubmit = (event) => {
-    //Check if same subjects are not selected
-    if (event.target.el1.value == event.target.el2.value || event.target.el2.value == event.target.el3.value || event.target.el1.value == event.target.el3.value) {
-      this.setState({
-        invalidSubjectInput: "Elective Should Not Be The Same!"
-      })
+    const { chiScore, engScore, mathScore, lsScore, el1, el1Score, el2, el2Score, el3, el3Score } = event.target
+
+    //Check if same subjects are selected
+    if (this.state.type === "4C2X" && el1.value === el2.value) {
+        console.log("hi")
+        this.setState({
+          invalidSubjectInput: "Elective Should Not Be The Same!"
+        })
     }
-    
+    else if (this.state.type ==="4C3X" && (el1.value == el2.value || el2.value == el3.value || el1.value == el3.value)) {
+        this.setState({
+          invalidSubjectInput: "Elective Should Not Be The Same!"
+        })
+    }
     else {
       //Push the core and elective inputted subject and score to the array 
       var inputScore = [
-        { subject: "Chinese", score: parseInt(event.target.chiScore.value, 10) },
-        { subject: "English", score: parseInt(event.target.engScore.value, 10) },
-        { subject: "Maths", score: parseInt(event.target.mathScore.value, 10) },
-        { subject: "LS", score: parseInt(event.target.lsScore.value, 10) },
-        { subject: event.target.el1.value, score: parseInt(event.target.el1Score.value, 10) }
+        { subject: "Chinese", score: parseInt(chiScore.value, 10) },
+        { subject: "English", score: parseInt(engScore.value, 10) },
+        { subject: "Maths", score: parseInt(mathScore.value, 10) },
+        { subject: "LS", score: parseInt(lsScore.value, 10) },
+        { subject: el1.value, score: parseInt(el1Score.value, 10) }
       ]
-       
-      if (event.target.el2.value != "noEl2") {
+
+      if (this.state.Elective2 !== true) {
         //Push the 2nd elective inputted subject and score to the array 
-        inputScore.push({ subject: event.target.el2.value, score: parseInt(event.target.el2Score.value, 10) })
+        inputScore.push({ subject: el2.value, score: parseInt(el2Score.value, 10) })
       }
-      if (event.target.el3.value != "noEl3") {
+      if (this.state.Elective3 !== true) {
         //Push the 3rd elective inputted subject and score to the array 
-        inputScore.push({ subject: event.target.el3.value, score: parseInt(event.target.el3Score.value, 10) })
+        inputScore.push({ subject: el3.value, score: parseInt(el3Score.value, 10) })
       }
       //Send the data
       this.props.calScore(inputScore)
@@ -57,26 +67,23 @@ class Home extends Component {
     switch (e) {
       case 1:
         this.setState({
-          Elective2: "disabled",
-          selected2: "selected",
-          Elective3: "disabled",
-          selected3: "selected"
+          type: "4C1X",
+          Elective2: true,
+          Elective3: true,
         })
         break;
       case 2:
         this.setState({
+          type: "4C2X",
           Elective2: "",
-          selected2: "",
-          Elective3: "disabled",
-          selected3: "selected"
+          Elective3: true,
         })
         break;
       case 3:
         this.setState({
+          type: "4C3X",
           Elective2: "",
-          selected2: "",
           Elective3: "",
-          selected3: ""
         })
         break;
     }
@@ -92,169 +99,28 @@ class Home extends Component {
 
           <form className="homeInnerContainer" onSubmit={this.handleFormSubmit.bind(this)}>
 
-            <div id="homeRadio" class="btn-group btn-group-toggle" data-toggle="buttons" >
-              <label className="btn btn-secondary " for="4C1X" onClick={() => this.radioOnclick(1)}>
+            <div id="homeRadio" className="btn-group btn-group-toggle" data-toggle="buttons" >
+              <label className="btn btn-secondary " onClick={() => this.radioOnclick(1)}>
                 <input type="radio" name="totalEl" id="4C1X" />4C1X
               </label>
-              <label className=" btn btn-secondary" for="4C2X" onClick={() => this.radioOnclick(2)}>
+              <label className=" btn btn-secondary" onClick={() => this.radioOnclick(2)}>
                 <input type="radio" name="totalEl" id="4C2X" />4C2X
               </label>
-              <label className=" btn btn-secondary active" for="4C3X" onClick={() => this.radioOnclick(3)}>
+              <label className=" btn btn-secondary active" onClick={() => this.radioOnclick(3)}>
                 <input type="radio" name="totalEl" id="4C3X" />4C3X
               </label>
             </div>
             <br />
+            <HomeCoreSelectOption label="label1" select="select1" id="chi" name="chiScore" subject="Chinese" />
+            <HomeCoreSelectOption label="label3" select="select3" id="eng" name="engScore" subject="English" />
+            <HomeCoreSelectOption label="label5" select="select5" id="math" name="mathScore" subject="Mathematics" />
+            <HomeCoreSelectOption label="label7" select="select7" id="lsScore" name="lsScore" subject="Liberal Study" />
 
-
-
-            <label className=" label1 control-label" for="chi">Chinese</label>
-            <select className="select1 form-control" id="chi" name="chiScore">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">5*</option>
-              <option value="7">5**</option>
-            </select>
-            <label className="label3 control-label" for="eng">English</label>
-            <select className="select3 form-control" id="eng" name="engScore">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">5*</option>
-              <option value="7">5**</option>
-            </select>
-            <label className="label5 control-label" for="math">Mathematics </label>
-            <select className="select5 form-control" id="math" name="mathScore">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">5*</option>
-              <option value="7">5**</option>
-            </select>
-            <label className="label7 control-label" for="lsScore">Liberal Study </label>
-            <select className="select7 form-control" id="lsScore" name="lsScore">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">5*</option>
-              <option value="7">5**</option>
-            </select>
-
-
-
-            <label className=" labelEL control-label">Electives:</label>
-            <select className="label2 form-control" id="el1" name="el1">
-              <option value="bio">Biology</option>
-              <option value="bafs">Business, Accounting and Financial Studies</option>
-              <option value="chem">Chemistry</option>
-              <option value="chist">Chinese History</option>
-              <option value="chiLit">Chinese Literature</option>
-              <option value="desi">Design and Applied Technology</option>
-              <option value="econ">Economics</option>
-              <option value="ers">Ethics and Religious Studies</option>
-              <option value="geog">Geography</option>
-              <option value="hmsc">Health Management and Social Care</option>
-              <option value="hist">History</option>
-              <option value="ict">Information and Communication Technology</option>
-              <option value="englit">Literature in English</option>
-              <option value="m1/m2">Mathematics M1/M2</option>
-              <option value="musc">Music</option>
-              <option value="pe">Physical Education</option>
-              <option value="phy" selected>Physics</option>
-              <option value="sciCom">Science: Combined Science</option>
-              <option value="sciInt">Science: Integrated Science</option>
-              <option value="tech">Technology and Living</option>
-              <option value="ths">Tourism and Hospitality Studies</option>
-              <option value="va">Visual Arts</option>
-            </select>
-            <select className="elBreak select2 form-control" name="el1Score">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">5*</option>
-              <option value="7">5**</option>
-            </select>
-
-            <select className="label4 form-control" id="el2" name="el2" disabled={this.state.Elective2}>
-              <option value="bio" >Biology</option>
-              <option value="bafs">Business, Accounting and Financial Studies</option>
-              <option value="chem" selected={!this.state.selected2}>Chemistry</option>
-              <option value="chist">Chinese History</option>
-              <option value="chiLit">Chinese Literature</option>
-              <option value="desi">Design and Applied Technology</option>
-              <option value="econ">Economics</option>
-              <option value="ers">Ethics and Religious Studies</option>
-              <option value="geog">Geography</option>
-              <option value="hmsc">Health Management and Social Care</option>
-              <option value="hist">History</option>
-              <option value="ict">Information and Communication Technology</option>
-              <option value="englit">Literature in English</option>
-              <option value="m1/m2">Mathematics M1/M2</option>
-              <option value="musc">Music</option>
-              <option value="pe">Physical Education</option>
-              <option value="phy">Physics</option>
-              <option value="sciCom">Science: Combined Science</option>
-              <option value="sciInt">Science: Integrated Science</option>
-              <option value="tech">Technology and Living</option>
-              <option value="ths">Tourism and Hospitality Studies</option>
-              <option value="va">Visual Arts</option>
-              <option value="noEl2" selected={this.state.selected2}>N/A</option>
-            </select>
-            <select className="elBreak select4 form-control" name="el2Score" disabled={this.state.Elective2}>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">5*</option>
-              <option value="7">5**</option>
-            </select>
-
-            <select className="label6 form-control" id="el3" name="el3" disabled={this.state.Elective3}>
-              <option value="bio" selected={!this.state.selected3}>Biology</option>
-              <option value="bafs">Business, Accounting and Financial Studies</option>
-              <option value="chem">Chemistry</option>
-              <option value="chist">Chinese History</option>
-              <option value="chiLit" >Chinese Literature</option>
-              <option value="desi">Design and Applied Technology</option>
-              <option value="econ">Economics</option>
-              <option value="ers">Ethics and Religious Studies</option>
-              <option value="geog">Geography</option>
-              <option value="hmsc">Health Management and Social Care</option>
-              <option value="hist">History</option>
-              <option value="ict">Information and Communication Technology</option>
-              <option value="englit">Literature in English</option>
-              <option value="m1/m2">Mathematics M1/M2</option>
-              <option value="musc">Music</option>
-              <option value="pe">Physical Education</option>
-              <option value="phy">Physics</option>
-              <option value="sciCom">Science: Combined Science</option>
-              <option value="sciInt">Science: Integrated Science</option>
-              <option value="tech">Technology and Living</option>
-              <option value="ths">Tourism and Hospitality Studies</option>
-              <option value="va" >Visual Arts</option>
-              <option value="noEl3"  selected={this.state.selected3}>N/A</option>
-            </select>
-            <select className="elBreak select6 form-control" name="el3Score" disabled={this.state.Elective3}>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">5*</option>
-              <option value="7">5**</option>
-            </select>
-
+            <label className={`labelEL control-label`}>Electives:</label>
+            <HomeElSelectOption label="label2" select="select2" id="el1" name="el1" nameScore="el1Score" />
+            <HomeElSelectOption label="label4" select="select4" id="el2" name="el2" nameScore="el2Score" disabled={this.state.Elective2} defaultValue="Physics" />
+            <HomeElSelectOption label="label6" select="select6" id="el3" name="el3" nameScore="el3Score" disabled={this.state.Elective3} defaultValue="Chemistry" />
+            
             <button type="submit" className="btn btn-info submitButton" id="submitButton">Submit</button>
           </form>
 

@@ -28,7 +28,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     width: 12%;
-    word-wrap:break-word
+    word-break: break-word
     }
   
   .cellOnClick{

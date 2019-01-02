@@ -25,13 +25,8 @@
       background-color: white;
       }
   
-      .modalWidthTableWrapper{
-        overflow-x:auto;
-      }
-
-      .chart{
-        overflow-x:auto;
-        min-width: 1000px;
+      .modalWidthTableWrapper {
+        overflow-x: auto;
       }
   
   

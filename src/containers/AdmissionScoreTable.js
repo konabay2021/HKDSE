@@ -68,11 +68,6 @@ class AdmissionScoreTable extends Component {
                 break;
                 case "POLYU":
                 this.displayScoreData = this.props.uniData.POLYU;
-                // if(this.state.link !== "https://api.myjson.com/bins/9l3t0"){
-                //     this.setState({
-                //         link: "https://api.myjson.com/bins/9l3t0"
-                //     })
-                // }
                 break;
             default:
                 this.displayScoreData = this.props.uniData.HKU;
@@ -89,7 +84,7 @@ class AdmissionScoreTable extends Component {
             else {
                 yourScore[index] = yourScore[0]
             }
-            yourScore[index].score >= data.LQScore ? color = "green" : color = "red"
+            yourScore[index].score >= data.MedianScore ? color = "green" : color = "red"
             return (
                 <tr
                     key={data.Code} id="admissionTable"
@@ -106,9 +101,6 @@ class AdmissionScoreTable extends Component {
     }
 
     render() {
-  
-
-       
         return (
             <div className="admissionTable paper" >
                 {/* the modal */}

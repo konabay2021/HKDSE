@@ -25,6 +25,8 @@ export const checkBasicRequirements = (minSubject, allScoretest) => {
 
 export const calFormula = (score, method) => {
     switch (method) {
+        case "2L3B":
+            return cal2L3B(score)
         case "Best 5":
             return calBest5(score)
         case "4C2X":
@@ -61,6 +63,19 @@ export const calBest5 = (allScoretest) => {
     copyallScoretest.sort((a, b) => b.score - a.score);
     result.score = copyallScoretest[0].score + copyallScoretest[1].score + copyallScoretest[2].score + copyallScoretest[3].score + copyallScoretest[4].score
     result.subject.push(copyallScoretest[0].subject, copyallScoretest[1].subject, copyallScoretest[2].subject, copyallScoretest[3].subject, copyallScoretest[4].subject)
+
+    return result;
+}
+
+export const cal2L3B = (allScoretest) => {
+    var copyallScoretest = allScoretest.map(a => ({ ...a }));
+    var result = { score: 0, subject: [] };
+    result.score = copyallScoretest[0].score + copyallScoretest[1].score 
+    result.subject.push(copyallScoretest[0].subject, copyallScoretest[1].subject)
+    copyallScoretest.splice(0, 2);
+    copyallScoretest.sort((a, b) => b.score - a.score);
+    result.score = result.score + copyallScoretest[0].score + copyallScoretest[1].score + copyallScoretest[2].score
+    result.subject.push(copyallScoretest[0].subject, copyallScoretest[1].subject,  copyallScoretest[2].subject)
 
     return result;
 }

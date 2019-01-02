@@ -16,7 +16,7 @@ class Result extends Component {
             render: "HKU",
             data: "",
             edit: false,
-            link: "https://api.myjson.com/bins/11ork4",
+            link: "https://api.myjson.com/bins/183axw",
         };
     }
 
@@ -64,19 +64,19 @@ class Result extends Component {
             case "HKU":
                 this.setState({
                     render: "HKU",
-                    link: "https://api.myjson.com/bins/11ork4"
+                    link: "https://api.myjson.com/bins/183axw"
                 });
                 break;
             case "CUHK":
                 this.setState({
                     render: "CUHK",
-                    link: "https://api.myjson.com/bins/11ork4"
+                    link: "https://api.myjson.com/bins/183axw"
                 });
                 break;
             case "HKUST":
                 this.setState({
                     render: "HKUST",
-                    link: "https://api.myjson.com/bins/11ork4"
+                    link: "https://api.myjson.com/bins/183axw"
                 });
                 break;
             case "POLYU":
@@ -221,11 +221,8 @@ class Result extends Component {
         return (
             <div className="gridContainer">
                 {this.state.edit === false ? <div>{scoreTable}</div> : <div>{editScoreTable}</div>}
-                {isEmpty(this.props.uniData[this.state.render])  ? <h4 className="loading">loading...</h4> :  this.loadUniDataTable()}
+                {isEmpty(this.props.uniData[this.state.render])  ? <h4 className="loading">Loading...</h4> :  this.loadUniDataTable()}
             </div>
-
-
-
         );
     }
 }

@@ -4,16 +4,47 @@ import AdmissionScoreTable from "./AdmissionScoreTable";
 import * as formula from "../components/formula";
 import { calScore } from '../actions/index'
 import { viewChosenSubject } from '../actions/index'
+import { dataReducer } from '../actions/index';
 import { bindActionCreators } from "redux";
+import axios from "axios";
+import "./Result.css"
 
 class Result extends Component {
     constructor(props) {
         super(props);
         this.state = {
             render: "HKU",
-            edit: false
+            data: "",
+            edit: false,
+            link: "https://api.myjson.com/bins/11ork4",
         };
     }
+
+    componentDidMount() {
+        axios.get(this.state.link)
+            .then((response) => {
+                this.props.dataReducer(response.data)
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
+    componentDidUpdate(prevProps,prevState) {
+        if (this.state.link !== prevState.link) {
+            axios.get(this.state.link)
+            .then((response) => {
+                console.log('sss')
+                this.props.dataReducer(response.data)
+                this.setState({
+                    finishLoading: !this.state.finishLoading
+                })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        }
+      }
 
     //submit the user editted score to action creator
     handleFormSubmit = (event) => {
@@ -31,13 +62,28 @@ class Result extends Component {
     handleClick = (e) => {
         switch (e) {
             case "HKU":
-                this.setState({ render: "HKU" });
+                this.setState({
+                    render: "HKU",
+                    link: "https://api.myjson.com/bins/11ork4"
+                });
                 break;
             case "CUHK":
-                this.setState({ render: "CUHK" });
+                this.setState({
+                    render: "CUHK",
+                    link: "https://api.myjson.com/bins/11ork4"
+                });
                 break;
             case "HKUST":
-                this.setState({ render: "HKUST" });
+                this.setState({
+                    render: "HKUST",
+                    link: "https://api.myjson.com/bins/11ork4"
+                });
+                break;
+            case "POLYU":
+                this.setState({
+                    render: "POLYU",
+                    link: "https://api.myjson.com/bins/9l3t0"
+                });
                 break;
             case "ChangeScore":
                 this.setState({ edit: !this.state.edit });
@@ -67,6 +113,11 @@ class Result extends Component {
                 return (
                     <AdmissionScoreTable
                         school="HKUST" />
+                );
+            case "POLYU":
+                return (
+                    <AdmissionScoreTable
+                        school="POLYU" />
                 );
             default:
                 break;
@@ -109,9 +160,17 @@ class Result extends Component {
     }
 
     render() {
+        const isEmpty = (obj) => {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key))
+                    return false;
+            }
+            return true;
+        }
+
         // the score table that display the user inputted score
         const scoreTable = (
-            <div class="scoreTable paper">
+            <div className="scoreTable paper">
                 <h4 className="tableTitle">Score Table:</h4>
                 <table>
                     <thead>
@@ -132,6 +191,7 @@ class Result extends Component {
                 <button className="btn  schoolButton" onClick={(e) => this.handleClick(("HKU"))}>HKU</button>
                 <button className="btn  schoolButton" onClick={(e) => this.handleClick(("CUHK"))}> CUHK</button>
                 <button className="btn  schoolButton" onClick={(e) => this.handleClick(("HKUST"))}> HKUST</button>
+                <button className="btn  schoolButton" onClick={(e) => this.handleClick(("POLYU"))}>POLYU</button>
             </div>
         )
         // the table that allows the user to edit and submit the score again
@@ -161,7 +221,7 @@ class Result extends Component {
         return (
             <div className="gridContainer">
                 {this.state.edit === false ? <div>{scoreTable}</div> : <div>{editScoreTable}</div>}
-                {this.loadUniDataTable()}
+                {isEmpty(this.props.uniData[this.state.render])  ? <h4 className="loading">loading...</h4> :  this.loadUniDataTable()}
             </div>
 
 
@@ -175,7 +235,8 @@ function mapStateToProps(state) {
     // inside of BookList
     return {
         callScore: state.callScore,
-        viewChosenSubject: state.viewChosenSubject
+        viewChosenSubject: state.viewChosenSubject,
+        uniData: state.uniData
     };
 }
 
@@ -185,7 +246,8 @@ function mapDispatchToProps(dispatch) {
     // to all of our reducers
     return bindActionCreators({
         viewChosenSubject1: viewChosenSubject,
-        calScore: calScore
+        calScore: calScore,
+        dataReducer: dataReducer
     }, dispatch);
 }
 

@@ -10,37 +10,14 @@ export default function (state = initialState, action) {
             var chosenSubject = [ ...initialState ]
             var newState = action.payload
             var color = "#81c784";
-
             // map the user's inputted subject with the selected subjects which are used to calculate the weighted score 
             newState.subject.map((el) => {
-                switch (el) {
-                    case newState.allScore[0].subject:
-                        chosenSubject[0] = color
-                        break;
-                    case newState.allScore[1].subject:
-                        chosenSubject[1] = color
-                        break;
-                    case newState.allScore[2].subject:
-                        chosenSubject[2] = color
-                        break;
-                    case newState.allScore[3].subject:
-                        chosenSubject[3] = color
-                        break;
-                    case newState.allScore[4].subject:
-                        chosenSubject[4] = color
-                        break;
-                    case newState.allScore[5].subject:
-                        chosenSubject[5] = color
-                        break;
-                    case newState.allScore[6].subject:
-                        chosenSubject[6] = color
-                        break;
-                    default:
-                        break;
-                }                       
+                newState.allScore.map((all, j) => {
+                    if(el === all.subject)
+                    chosenSubject[j] = color 
+                } )   
             })
             return chosenSubject;
-            break;
         default:
             return state; // this becomes the state 
     }

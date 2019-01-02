@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { calScore } from '../actions/index'
 import { bindActionCreators } from "redux";
+import "./Home.css"
 
 //Home page.
 class Home extends Component {

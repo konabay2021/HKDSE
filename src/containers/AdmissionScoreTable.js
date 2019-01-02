@@ -5,27 +5,25 @@ import {calFormula, checkBasicRequirements } from "../components/formula";
 import { viewChosenSubject } from '../actions/index';
 import { dataReducer } from '../actions/index';
 import { bindActionCreators } from "redux";
-import Modal from "../components/Modal"
+import Modal from "../components/Modal";
+import "./AdmissionScoreTable.css"
 
+
+// https://api.myjson.com/bins/c03r0 3big
 class AdmissionScoreTable extends Component {
     constructor(props) {
         super(props);
         this.state = {
             modalDisplay: "none",
             modalContent: {},
-            showSubject: true
+            showSubject: true,
+            link: "https://api.myjson.com/bins/11ork4"
         }
     }
 
-    componentDidMount() {
-        axios.get('https://api.myjson.com/bins/v1its')
-            .then((response) => {
-                this.props.dataReducer(response.data)
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }
+    
+
+
 
     //Pass the subjects and scores that are chosen in different calculation formula to Action Creator to display to the user which subjects are selected
     eventHandler = (subject, callScore) => {
@@ -68,6 +66,14 @@ class AdmissionScoreTable extends Component {
             case "HKUST":
                 this.displayScoreData = this.props.uniData.HKUST;
                 break;
+                case "POLYU":
+                this.displayScoreData = this.props.uniData.POLYU;
+                // if(this.state.link !== "https://api.myjson.com/bins/9l3t0"){
+                //     this.setState({
+                //         link: "https://api.myjson.com/bins/9l3t0"
+                //     })
+                // }
+                break;
             default:
                 this.displayScoreData = this.props.uniData.HKU;
         }
@@ -94,20 +100,13 @@ class AdmissionScoreTable extends Component {
                     <td> {data.MedianScore} </td>
                     <td> {data.LQScore} </td>
                     <td className="cellOnClick" style={{ color: color }} onClick={(e) => this.eventHandler(yourScore[index].subject, this.props.callScore)}>{yourScore[index].score}</td>
-
                 </tr>
             );
         });
     }
 
     render() {
-        const isEmpty = (obj) => {
-            for (var key in obj) {
-                if (obj.hasOwnProperty(key))
-                    return false;
-            }
-            return true;
-        }
+  
 
        
         return (
@@ -137,7 +136,7 @@ class AdmissionScoreTable extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {isEmpty(this.props.uniData) ? null : this.renderList() } 
+                        {this.renderList() } 
                     </tbody>
                 </table>
             </div>
@@ -147,8 +146,6 @@ class AdmissionScoreTable extends Component {
 }
 
 function mapStateToProps(state) {
-    // Whatever is returned will show up as props
-    // inside of BookList
     return {
         callScore: state.callScore,
         uniData: state.uniData

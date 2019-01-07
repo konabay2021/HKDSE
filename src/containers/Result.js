@@ -192,7 +192,6 @@ class Result extends Component {
 
 
     render() {
-        
         return (
             <div className="gridContainer">
                 {this.state.edit === false ? <div>{this.scoreTable}</div> : <div>{this.editScoreTable}</div>}

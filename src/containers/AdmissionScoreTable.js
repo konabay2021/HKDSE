@@ -55,31 +55,6 @@ class AdmissionScoreTable extends Component {
     // Render the admssion score table to the user, together to determine whether 
     // the inputted score is higher than the lower quartile of the admisson score
     renderList = () => {
-        // switch (this.props.school) {
-        //     case "HKU":
-        //         this.displayScoreData = this.props.uniData[this.props.school];
-        //         break;
-        //     case "CUHK":
-        //         this.displayScoreData = this.props.uniData.CUHK;
-        //         break;
-        //     case "HKUST":
-        //         this.displayScoreData = this.props.uniData.HKUST;
-        //         break;
-        //         case "POLYU":
-        //         this.displayScoreData = this.props.uniData.POLYU;
-        //         break;
-        //         case "CITYU": 
-        //         this.displayScoreData = this.props.uniData.CITYU;
-        //         break;
-        //         case "BUHK": 
-        //         this.displayScoreData = this.props.uniData.BUHK;
-        //         break;
-        //         case "LINGU": 
-        //         this.displayScoreData = this.props.uniData.LINGU;
-        //         break;
-        //         default:
-        //         this.displayScoreData = []
-        // }
         this.displayScoreData = this.props.uniData[this.props.school];
         let color;
         let yourScore = [];

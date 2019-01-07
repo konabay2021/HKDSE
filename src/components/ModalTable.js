@@ -3,8 +3,17 @@ import './Modal.css';
 
 
 const ModalTable = (props) => {
+    const { modalContent, reason } = props;
+    const minRequire = modalContent.MinLevelRequired.toString().split('');
 
+    const formatReason = (a) => {
+        const muliReason = a.split("//")
+        return muliReason.map((e,i) => {
+            return <p key={i}>{e}</p>
+        })
+    }
     const NAdefault = (comp) => {
+
         switch (comp) {
             case "":
                 return "N/A"
@@ -17,10 +26,36 @@ const ModalTable = (props) => {
         }
     }
 
-    const modalContent = props.modalContent;
-    const minRequire = modalContent.MinLevelRequired.toString().split('');
+    const remarks = (e) => {
+        if (e.Code.charAt(2) === "6" && modalContent.Weighting !== "") {
+            return (
+                <React.Fragment>
+                    <p>Subjects that will be given heavier weightings ranges from 1.1 to 2: ($$ indicates heavier weightings than $)</p>
+                </React.Fragment>
+            )
+        }
+    }
+    const eligible = () => {
+        return (
+            <table className="modalTable">
+                <caption>Counting</caption>
+                <thead >
+                    <tr>
+                        <th className="border">Not Eligible Reasons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td className="border">{formatReason(reason)}</td>
+                    </tr>
+                </tbody>
+            </table>
+        )
+    }
+
     return (
         <React.Fragment>
+            {reason !== undefined && reason !== ""  ? eligible() : null}
             <div className="modalWidthTableWrapper">
                 <table className="modalTable ">
 
@@ -84,7 +119,10 @@ const ModalTable = (props) => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td className="border">{NAdefault(modalContent.Weighting)}</td>
+                        <td className="border">
+                            <span>{remarks(modalContent)}</span>
+                            <p>{NAdefault(modalContent.Weighting)}</p>
+                        </td>
                     </tr>
                 </tbody>
             </table>

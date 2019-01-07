@@ -1,10 +1,7 @@
 import Chart from 'react-apexcharts'
-import React, { Component } from "react";
+import React from "react";
 
 class ModalChart extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
 
         return (

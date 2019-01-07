@@ -4,12 +4,12 @@ import { DISPLAY_ERROR_MESSAGE } from "../actions"
 //for testing use only 
 var initialState =  [
   { subject: "Chinese", score: 5 },
-  { subject: "English", score:6 },
-  { subject: "Maths", score: 7 },
+  { subject: "English", score:4 },
+  { subject: "Maths", score: 3},
   { subject: "LS", score:7 },
-  { subject: "phy", score:7 },
-  { subject: "chem", score:7 },
-  { subject: "bio", score:7 },
+  { subject: "Physics", score:3 },
+  // { subject: "x", score:3 },
+
 ]
 
 

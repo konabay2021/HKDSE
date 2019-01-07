@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import onClickOutside from 'react-onclickoutside';
 import ModalTable from "./ModalTable";
 import ModalChart from "./ModalChart";
@@ -28,12 +28,14 @@ class Modal extends React.Component {
                 arr.push("2017")
             case 1:
                 arr.push("2018")
+            default:
+                break;
         }
         return arr
     }
 
     render() {
-        const { modalContent } = this.props;
+        const { modalContent, reason } = this.props;
         const yaxis = [{
             min: 0,
             title: {
@@ -81,7 +83,7 @@ class Modal extends React.Component {
                 <button className="close" onClick={this.props.closeModal}>&times;</button>
                 <h2>{modalContent.Code} {modalContent.Course}</h2>
                 <h6>Admissions Information</h6>
-                <ModalTable modalContent={modalContent} />
+                <ModalTable modalContent={modalContent} reason={reason} />
                 <ModalChart title="Offer Statistics (as at the Announcement of the Main Round Offer Results)"
                     options={chart1Options} series={chart1Series} />
                 <ModalChart title="Application Statistics (after Modification of Programme Choices)"

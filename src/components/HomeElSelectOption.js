@@ -4,7 +4,6 @@ const HomeElSelectOption = (props) => {
     const { label, select, id, name, nameScore, disabled, defaultValue} = props
     return (
         <React.Fragment>
-           
             <select className={`${label} form-control `} data-dropup-auto="false" data-live-search="true" id={id} name={name} disabled={disabled} defaultValue={defaultValue}>
                 <option value="Biology">Biology</option>
                 <option value="Business, Accounting and Financial Studies">Business, Accounting and Financial Studies</option>
@@ -23,9 +22,11 @@ const HomeElSelectOption = (props) => {
                 <option value="Music">Music</option>
                 <option value="Physical Education">Physical Education</option>
                 <option value="Physics" >Physics</option>
-                <option value="Science: Combined Science">Science: Combined Science</option>
-                <option value="Science: Integrated Science">Science: Integrated Science</option>
-                <option value="Technology and Living">Technology and Living</option>
+                <option value="Combined Science (Physics + Biology)">Science: Combined Science (Physics + Biology)</option>
+                <option value="Combined Science (Physics + Chemistry)">Science: Combined Science (Physics + Chemistry)</option>
+                <option value="Combined Science (Chemistry + Biology)">Science: Combined Science (Chemistry + Biology)</option>
+                <option value="Integrated Science">Science: Integrated Science</option>
+                <option value="Technology and Living (Food Science + Technology)">Technology and Living</option>
                 <option value="Tourism and Hospitality Studies">Tourism and Hospitality Studies</option>
                 <option value="Visual Arts">Visual Arts</option>
             </select>

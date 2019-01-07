@@ -1,69 +1,69 @@
-.gridContainer{
-    margin-left: 2.5%;
-    margin-right: 2.5%
-  }
-  
-  .scoreTableTr{
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-  } 
-  
-  .tableTitle{
-    text-align: center;
-    padding: 5px 0;
-  }
+.gridContainer {
+  margin-left: 2.5%;
+  margin-right: 2.5%
+}
 
-  table{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto
-    }
-    
-    td, th {
-    vertical-align: middle !important;
-    text-align: center !important;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 12%;
-    word-break: break-word
-    }
-  
-  .cellOnClick{
-    cursor: pointer;
-  }
-  
-  .cellOnClick:hover{
-    background-color: #d6d6d6
-  }
+.scoreTableTr {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
 
-  .schoolButton{
-    width: 30%;
-    margin: 1.5%
-  }
-  
-  .changeButton{
-    width: 97%;
-    margin: 1.5% 1.5%;
-  }
+.tableTitle {
+  text-align: center;
+  padding: 5px 0;
+}
 
-  @media only screen and (min-width: 1024px) {
+table {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto
+}
 
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 12%;
+  word-break: break-word
+}
 
-    .gridContainer{
-      display: grid;
-      grid-template-columns: 20% 2.5% 77.5% ;
+.cellOnClick {
+  cursor: pointer;
+}
+
+.cellOnClick:hover {
+  background-color: #d6d6d6
+}
+
+.schoolButton {
+  width: 47%;
+  margin: 1.5%
+}
+
+.changeButton, .showButton {
+  width: 97%;
+  margin: 1.5% 1.5%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 20% 2.5% 77.5%;
   }
-  .scoreTable{
+  .showButton {
+    display: none
+  }
+  .scoreTable {
+    position: -webkit-sticky;
     position: sticky;
-    top: 0px;
-    padding-bottom: 1%;  
+    top: 20px;
+    padding-bottom: 1%;
     grid-column-start: 1;
-    grid-column-end:  2;
-  } 
-  .loading{
+    grid-column-end: 2;
+  }
+  .loading {
     grid-column-start: 3;
-    grid-column-end:  4;
+    grid-column-end: 4;
   }
-
-  
-  }
+}

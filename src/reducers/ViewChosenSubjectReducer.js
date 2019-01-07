@@ -15,9 +15,9 @@ export default function (state = initialState, action) {
                 newState.allScore.map((all, j) => {
                     if(el === all.subject)
                     chosenSubject[j] = color
-                    return all
+                    // return all
                 } )   
-                return el 
+                // return el 
             })
             return chosenSubject;
         default:

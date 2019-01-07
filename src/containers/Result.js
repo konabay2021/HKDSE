@@ -18,6 +18,7 @@ class Result extends Component {
             data: "",
             edit: false,
             link: link.HKU,
+            showScoreTable: true
         };
     }
 
@@ -128,7 +129,7 @@ class Result extends Component {
         })
     }
 
-     isEmpty = (obj) => {
+    isEmpty = (obj) => {
         for (var key in obj) {
             if (obj.hasOwnProperty(key))
                 return false;
@@ -137,64 +138,78 @@ class Result extends Component {
     }
 
     // the score table that display the user inputted score
-     scoreTable = (
-        <div className="scoreTable paper">
-            <h4 className="tableTitle">Score Table:</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Subject</th>
-                        <th>Level</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.loadInputScore()}
-                </tbody>
-            </table>
+    scoreTable = () => {
+        const {showScoreTable} = this.state
+        return (
+            <div className="scoreTable paper">
+                <button 
+                    className="btn btn-info showButton"
+                    onClick={() => this.setState({ showScoreTable: !showScoreTable })}>
+                    <span>{showScoreTable ? "Close" : "Open"} Score Table</span>
+                </button>
+                <div style={{ display: showScoreTable ? "block" : "none" }}>
+                    <h4 className="tableTitle">Score Table:</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.loadInputScore()}
+                        </tbody>
+                    </table>
 
-            <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.cal4CXX(this.props.callScore, "4C2X").subject, this.props.callScore)} >4C 2X: {formula.cal4CXX(this.props.callScore, "4C2X").score} </h5>
-            <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.calBest5(this.props.callScore).subject, this.props.callScore)} >Best 5: {formula.calBest5(this.props.callScore).score} </h5>
-            <button className="btn  changeButton" onClick={() => this.props.history.push("/")}>Back To Home Page</button>
-            <button className="btn  changeButton" onClick={this.handleEditClick}>Change Input Score</button>
-            <button className="btn  schoolButton" onClick={(e) => this.handleClick(("HKU"))}>HKU</button>
-            <button className="btn  schoolButton" onClick={(e) => this.handleClick(("CUHK"))}>CUHK</button>
-            <button className="btn  schoolButton" onClick={(e) => this.handleClick(("HKUST"))}>HKUST</button>
-            <button className="btn  schoolButton" onClick={(e) => this.handleClick(("POLYU"))}>POLYU</button>
-            <button className="btn  schoolButton" onClick={(e) => this.handleClick(("CITYU"))}>CITYU</button>
-            <button className="btn  schoolButton" onClick={(e) => this.handleClick(("BUHK"))}>BUHK</button>
-            <button className="btn  schoolButton" onClick={(e) => this.handleClick(("LINGU"))}>LINGU</button>
-            <button className="btn  schoolButton" onClick={(e) => this.handleClick(("EDUHK"))}>EDUHK</button>
-        </div>
-    )
+                    <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.cal4CXX(this.props.callScore, "4C2X").subject, this.props.callScore)} >4C 2X: {formula.cal4CXX(this.props.callScore, "4C2X").score} </h5>
+                    <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.calBest5(this.props.callScore).subject, this.props.callScore)} >Best 5: {formula.calBest5(this.props.callScore).score} </h5>
+                    <button className="btn btn-secondary changeButton" onClick={() => this.props.history.push("/")}>Back To Home Page</button>
+                    <button className="btn btn-secondary changeButton" onClick={this.handleEditClick}>Change Input Score</button>
+                    <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("HKU"))}>HKU</button>
+                    <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("CUHK"))}>CUHK</button>
+                    <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("HKUST"))}>HKUST</button>
+                    <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("POLYU"))}>POLYU</button>
+                    <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("CITYU"))}>CITYU</button>
+                    <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("BUHK"))}>BUHK</button>
+                    <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("LINGU"))}>LINGU</button>
+                    <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("EDUHK"))}>EDUHK</button>
+                </div>
+            </div>
+        )
+    }
+
     // the table that allows the user to edit and submit the score again
-     editScoreTable = (
-        <div className="scoreTable paper">
-            <h4 className="tableTitle">Score Table:</h4>
-            <form onSubmit={this.handleFormSubmit.bind(this)}>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Subject</th>
-                            <th>Level</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.loadEditScore()}
-                    </tbody>
-                </table>
-                <button type="submit" className="btn btn-info submitButton" id="submitButton">Submit</button>
-            </form>
+    editScoreTable = () => {
+        return (
+            <div className="scoreTable paper">
+                <h4 className="tableTitle">Score Table:</h4>
+                <form onSubmit={this.handleFormSubmit.bind(this)}>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.loadEditScore()}
+                        </tbody>
+                    </table>
+                    <button type="submit" className="btn btn-info submitButton" id="submitButton">Submit</button>
+                </form>
 
-            <button className="btn  changeButton" onClick={(e) => this.handleClick(("ChangeScore"))}>Cancel</button>
+                {/* <button className="btn changeButton" onClick={(e) => this.handleClick(("ChangeScore"))}>Cancel</button> */}
 
-        </div>
-    )
+            </div>
+        )
+
+    }
 
 
     render() {
         return (
             <div className="gridContainer">
-                {this.state.edit === false ? <div>{this.scoreTable}</div> : <div>{this.editScoreTable}</div>}
+                {this.state.edit === false ? <div>{this.scoreTable()}</div> : <div>{this.editScoreTable()}</div>}
                 {this.isEmpty(this.props.uniData[this.state.render]) ? <h4 className="loading">Loading...</h4> : this.loadUniDataTable()}
             </div>
         );

@@ -24,7 +24,8 @@ export const checkBasicRequirements = (minSubject, allScoretest, reqSub) => {
                 result.reason += "// At Least One Of Your Electives Do Not Fulfill The Course Minimum Level Requirement"
                 break;
             }
-            if (copyallScoretest.length >= minSubject.length && copyallScoretest[1].score < minSubject.charAt(5)) {
+            if (copyallScoretest.length >= minSubject.length - 4  && 
+                copyallScoretest[1].score < minSubject.charAt(5) ) {
                 result.score = "Not eligible"
                 result.reason += "// At Least One Of Your Electives Do Not Fulfill The Course Minimum Level Requirement"
             }

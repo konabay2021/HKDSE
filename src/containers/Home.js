@@ -26,15 +26,14 @@ class Home extends Component {
 
     //Check if same subjects are selected
     if (this.state.type === "4C2X" && el1.value === el2.value) {
-      console.log("hi")
-      this.setState({
-        invalidSubjectInput: "Elective Should Not Be The Same!"
-      })
+        this.setState({
+          invalidSubjectInput: "Elective Should Not Be The Same!"
+        })
     }
-    else if (this.state.type === "4C3X" && (el1.value === el2.value || el2.value === el3.value || el1.value === el3.value)) {
-      this.setState({
-        invalidSubjectInput: "Elective Should Not Be The Same!"
-      })
+    else if (this.state.type ==="4C3X" && (el1.value == el2.value || el2.value == el3.value || el1.value == el3.value)) {
+        this.setState({
+          invalidSubjectInput: "Elective Should Not Be The Same!"
+        })
     }
     else {
       //Push the core and elective inputted subject and score to the array 
@@ -86,8 +85,6 @@ class Home extends Component {
           Elective3: "",
         })
         break;
-      default:
-        break
     }
   }
 
@@ -122,7 +119,7 @@ class Home extends Component {
             <HomeElSelectOption label="label2" select="select2" id="el1" name="el1" nameScore="el1Score" />
             <HomeElSelectOption label="label4" select="select4" id="el2" name="el2" nameScore="el2Score" disabled={this.state.Elective2} defaultValue="Physics" />
             <HomeElSelectOption label="label6" select="select6" id="el3" name="el3" nameScore="el3Score" disabled={this.state.Elective3} defaultValue="Chemistry" />
-
+            
             <button type="submit" className="btn btn-info submitButton" id="submitButton">Submit</button>
           </form>
 

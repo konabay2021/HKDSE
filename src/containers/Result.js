@@ -139,10 +139,10 @@ class Result extends Component {
 
     // the score table that display the user inputted score
     scoreTable = () => {
-        const {showScoreTable} = this.state
+        const { showScoreTable } = this.state
         return (
             <div className="scoreTable paper">
-                <button 
+                <button
                     className="btn btn-info showButton"
                     onClick={() => this.setState({ showScoreTable: !showScoreTable })}>
                     <span>{showScoreTable ? "Close" : "Open"} Score Table</span>
@@ -207,10 +207,13 @@ class Result extends Component {
 
 
     render() {
+        console.log(this.props.modalState)
         return (
-            <div className="gridContainer">
-                {this.state.edit === false ? <div>{this.scoreTable()}</div> : <div>{this.editScoreTable()}</div>}
-                {this.isEmpty(this.props.uniData[this.state.render]) ? <h4 className="loading">Loading...</h4> : this.loadUniDataTable()}
+            <div className={this.props.modalState.state === "block" ? "hideOverflow": ""}>
+                <div className="gridContainer">
+                    {this.state.edit === false ? <div>{this.scoreTable()}</div> : <div>{this.editScoreTable()}</div>}
+                    {this.isEmpty(this.props.uniData[this.state.render]) ? <h4 className="loading">Loading...</h4> : this.loadUniDataTable()}
+                </div>
             </div>
         );
     }
@@ -222,7 +225,8 @@ function mapStateToProps(state) {
     return {
         callScore: state.callScore,
         viewChosenSubject: state.viewChosenSubject,
-        uniData: state.uniData
+        uniData: state.uniData,
+        modalState: state.modalState
     };
 }
 

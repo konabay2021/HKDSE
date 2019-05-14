@@ -13,14 +13,14 @@ import './style/style.css'
 ReactDOM.render(
     <Provider store={createStore(reducers)}>
         <BrowserRouter>
-            <div>
+            <>
                 {/* <div>Header</div>
                 by Ray */}
                 <Switch>
                     <Route path="/result" component={Result} />
                     <Route path="/" component={Home} />
                 </Switch>
-            </div>
+            </>
         </BrowserRouter>
     </Provider>,
     document.getElementById('root'));

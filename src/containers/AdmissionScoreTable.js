@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import {calFormula, checkBasicRequirements } from "../components/formula";
 import { viewChosenSubject } from '../actions/index';
 import { dataReducer } from '../actions/index';
+import {modalState} from "../actions/index";
 import { bindActionCreators } from "redux";
 import Modal from "../components/Modal";
 import "./AdmissionScoreTable.css"
@@ -38,6 +39,7 @@ class AdmissionScoreTable extends Component {
 
     //display modal when clicked
     displayModal = (modalContent,reason) => {
+        this.props.modalState("block")
         this.setState({
             modalDisplay: "block",
             modalContent: modalContent,
@@ -46,6 +48,7 @@ class AdmissionScoreTable extends Component {
     }
 
     closeModal = () => {
+        this.props.modalState("none")
         this.setState({
             modalDisplay: "none"
         })
@@ -134,7 +137,8 @@ function mapDispatchToProps(dispatch) {
     // to all of our reducers
     return bindActionCreators({
         viewChosenSubject: viewChosenSubject,
-        dataReducer: dataReducer
+        dataReducer: dataReducer,
+        modalState: modalState
     }, dispatch);
 }
 

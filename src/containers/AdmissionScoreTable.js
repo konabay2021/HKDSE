@@ -40,6 +40,7 @@ class AdmissionScoreTable extends Component {
     //display modal when clicked
     displayModal = (modalContent,reason) => {
         this.props.modalState("block")
+        document.body.classList.add('modal-open')
         this.setState({
             modalDisplay: "block",
             modalContent: modalContent,
@@ -49,6 +50,7 @@ class AdmissionScoreTable extends Component {
 
     closeModal = () => {
         this.props.modalState("none")
+        document.body.classList.remove('modal-open');
         this.setState({
             modalDisplay: "none"
         })

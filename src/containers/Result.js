@@ -8,7 +8,7 @@ import { viewChosenSubject } from '../actions/index'
 import { dataReducer } from '../actions/index';
 import { bindActionCreators } from "redux";
 import axios from "axios";
-import "./Result.css"
+import "./Result.scss"
 
 class Result extends Component {
     constructor(props) {
@@ -207,13 +207,10 @@ class Result extends Component {
 
 
     render() {
-        console.log(this.props.modalState)
         return (
-            <div className={this.props.modalState.state === "block" ? "hideOverflow": ""}>
-                <div className="gridContainer">
-                    {this.state.edit === false ? <div>{this.scoreTable()}</div> : <div>{this.editScoreTable()}</div>}
-                    {this.isEmpty(this.props.uniData[this.state.render]) ? <h4 className="loading">Loading...</h4> : this.loadUniDataTable()}
-                </div>
+            <div className="gridContainer">
+                {this.state.edit === false ? <div>{this.scoreTable()}</div> : <div>{this.editScoreTable()}</div>}
+                {this.isEmpty(this.props.uniData[this.state.render]) ? <h4 className="loading">Loading...</h4> : this.loadUniDataTable()}
             </div>
         );
     }

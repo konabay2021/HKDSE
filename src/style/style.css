@@ -1,6 +1,9 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+.modal-open{
+  overflow: hidden;
+}
 body {
   margin: 0px;
   padding: 0px;

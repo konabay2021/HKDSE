@@ -5,7 +5,9 @@ import { bindActionCreators } from "redux";
 import HomeCoreSelectOption from "../components/HomeCoreSelectOption";
 import HomeElSelectOption from "../components/HomeElSelectOption";
 import "./Home.css"
-
+import {
+Link
+} from 'react-router-dom'
 //Home page.
 class Home extends Component {
   constructor(props) {
@@ -57,9 +59,12 @@ class Home extends Component {
       this.props.calScore(inputScore)
       this.props.history.push("/result");
     }
-    event.preventDefault();
+     event.preventDefault();
+     window.scrollTo(0, 0)
 
   }
+
+  
 
   //disable some select elements if certain button is clicked 
   radioOnclick = (e) => {
@@ -120,7 +125,7 @@ class Home extends Component {
             <HomeElSelectOption label="label4" select="select4" id="el2" name="el2" nameScore="el2Score" disabled={this.state.Elective2} defaultValue="Physics" />
             <HomeElSelectOption label="label6" select="select6" id="el3" name="el3" nameScore="el3Score" disabled={this.state.Elective3} defaultValue="Chemistry" />
             
-            <button type="submit" className="btn btn-info submitButton" id="submitButton">Submit</button>
+            <button type="submit" className="btn btn-info submitButton" id="submitButton"> Submit</button>
           </form>
 
         </div>

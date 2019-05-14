@@ -55,3 +55,11 @@ body {
 
 
 
+.switch-wrapper44 {
+  position: relative;
+}
+ 
+.switch-wrapper44 > div {
+  position: absolute;
+  width: 100%;
+}

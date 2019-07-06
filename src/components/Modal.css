@@ -5,7 +5,7 @@
     overflow-y: scroll !important;
     overflow-x: hidden;
     position: fixed; 
-    z-index: 1; 
+    z-index: 11; 
     background-color: white;
     margin: 5vh 10%;  /*  why vh work, % doesnt work? */
     padding: 20px;

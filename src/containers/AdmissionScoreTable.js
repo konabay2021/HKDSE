@@ -63,7 +63,6 @@ class AdmissionScoreTable extends Component {
         this.displayScoreData = this.props.uniData[this.props.school];
         let color;
         let yourScore = [];
-        
         return this.displayScoreData.map((data, index) => {
             yourScore[index] = checkBasicRequirements(data.MinLevelRequired.toString(), this.props.callScore, data.ReqSub)
             if (typeof yourScore[index].score !== "string") {

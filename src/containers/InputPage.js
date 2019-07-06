@@ -4,23 +4,29 @@ import { calScore } from '../actions/index'
 import { bindActionCreators } from "redux";
 import HomeCoreSelectOption from "../components/HomeCoreSelectOption";
 import HomeElSelectOption from "../components/HomeElSelectOption";
-import "./Home.css"
+import "./InputPage.scss"
+import { link } from "../data/jsonLink";
+import axios from "axios";
 import {
-Link
+  Link
 } from 'react-router-dom'
-//Home page.
-class Home extends Component {
+
+//InputPage.
+
+class InputPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      invalidSubjectInput: null,
+      invalidSubjectInput: false,
       type: "4C3X",
       Elective2: "",
       selected2: "",
       Elective3: "",
       selected3: "",
+      myJson: ""
     }
   }
+
 
   // Send the inputted form to Action Creator
   handleFormSubmit = (event) => {
@@ -28,14 +34,14 @@ class Home extends Component {
 
     //Check if same subjects are selected
     if (this.state.type === "4C2X" && el1.value === el2.value) {
-        this.setState({
-          invalidSubjectInput: "Elective Should Not Be The Same!"
-        })
+      this.setState({
+        invalidSubjectInput: "Elective Should Not Be The Same!"
+      })
     }
-    else if (this.state.type ==="4C3X" && (el1.value == el2.value || el2.value == el3.value || el1.value == el3.value)) {
-        this.setState({
-          invalidSubjectInput: "Elective Should Not Be The Same!"
-        })
+    else if (this.state.type === "4C3X" && (el1.value == el2.value || el2.value == el3.value || el1.value == el3.value)) {
+      this.setState({
+        invalidSubjectInput: "Elective Should Not Be The Same!"
+      })
     }
     else {
       //Push the core and elective inputted subject and score to the array 
@@ -57,14 +63,35 @@ class Home extends Component {
       }
       //Send the data
       this.props.calScore(inputScore)
+
+      this.setState({invalidSubjectInput: false})
+      // this.props.history.push("/HKDSE/result");
       this.props.history.push("/result");
+      window.scrollTo(0, 0)
     }
-     event.preventDefault();
-     window.scrollTo(0, 0)
+    event.preventDefault();
+    
 
   }
 
-  
+  componentDidMount() {
+    const links = Object.values(link)
+    fetch('https://api.github.com/repos/facebook/create-react-app/contributors')
+      .then(res => res.json())
+      .then(contributors => this.setState({ contributors }));
+    links.map(link => {
+      fetch(link)
+        .then((response) => {
+          return response.json()
+        })
+        .then((myJson) => {
+          console.log(myJson);
+          this.setState({ myJson })
+        });
+    })
+
+
+  }
 
   //disable some select elements if certain button is clicked 
   radioOnclick = (e) => {
@@ -95,11 +122,18 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="inputPageContainer">
+        <div className="introContainer">
+          <p>University Score Calculator</p>
+          <p>Generate all possible University courses based on your HKDSE Score on One Click</p>
+          <div className="imgContainer">
+            <img src="https://i.imgur.com/kOeI9ZQ.jpg" alt="HKDSE Score Calculator" ></img>
+          </div>
+        </div>
         <h2 className="homeTitle">Start By Inputting Your DSE Score: </h2>
-        <div className="homeContainer">
+        <div className="inputContainer">
 
-          <h1 className="homeTitle">{this.state.invalidSubjectInput}</h1>
+          <h4 className="errorTitle">{this.state.invalidSubjectInput}</h4>
 
           <form className="homeInnerContainer" onSubmit={this.handleFormSubmit.bind(this)}>
 
@@ -124,7 +158,7 @@ class Home extends Component {
             <HomeElSelectOption label="label2" select="select2" id="el1" name="el1" nameScore="el1Score" />
             <HomeElSelectOption label="label4" select="select4" id="el2" name="el2" nameScore="el2Score" disabled={this.state.Elective2} defaultValue="Physics" />
             <HomeElSelectOption label="label6" select="select6" id="el3" name="el3" nameScore="el3Score" disabled={this.state.Elective3} defaultValue="Chemistry" />
-            
+
             <button type="submit" className="btn btn-info submitButton" id="submitButton"> Submit</button>
           </form>
 
@@ -143,4 +177,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ calScore: calScore }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(Home);
+export default connect(null, mapDispatchToProps)(InputPage);

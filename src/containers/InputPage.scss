@@ -1,0 +1,188 @@
+.inputPageContainer{
+  color: rgb(223, 223, 223);
+  .inputContainer{
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  label, #homeRadio {
+    padding-top: 20px;
+  }
+  
+  .homeTitle{
+    margin-top: 150px;
+    text-align: center;
+  }
+
+  .errorTitle{
+    text-align: center;
+    margin-top: 25px;
+    color: red
+  }
+  
+  select {
+    margin-bottom: 10px;
+  }
+  
+  .elBreak{
+    margin-bottom: 30px;
+  }
+
+  #submitButton{ 
+    margin-top:5%;
+    width: 100%
+  }
+}
+
+
+  @media only screen and (min-width: 1024px) {
+  
+  .inputPageContainer{
+    max-width: 1920px;
+    margin: 0 auto;
+    .introContainer{
+      padding-top: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      p{
+        font-size: 20px;
+        text-align: center
+      }
+      .imgContainer{
+        background-color: white;
+        box-shadow: -5px -7px 18px -3px rgba(136,136,136,1);
+        margin-bottom: 100px;
+        img{
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .imgTextContainer{
+            color: black;
+            text-align: center;
+            padding: 20px 10px;
+            span{
+                vertical-align: middle;
+            }
+        }
+      }
+    }
+    
+
+    .inputContainer{
+      display: flex;           
+      flex-direction: column;  
+      justify-content: center; 
+      padding-bottom: 150px;
+      .homeInnerContainer{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 10% 20% 8% 10% 36% 8% 10%;
+        grid-template-rows: 100px 50px 50px 50px 50px auto ;
+        grid-template-areas: 
+          " . radio radio . . . ."
+          ". label1 select1 . labelEL . ." 
+          ". label3 select3 . label2 select2 ."
+          ". label5 select5 . label4 select4 ."
+          ". label7 select7 . label6 select6 ."
+          ". submitButton submitButton submitButton submitButton submitButton .";
+          #homeRadio{
+            align-self: center;
+            grid-area: radio;
+          }
+          .labelEL{
+            align-self: center;
+            grid-area: labelEL;
+          }
+          .label1 {
+            align-self: center;
+            grid-area: label1;
+          }
+          
+          .select1{
+            align-self: center;
+            grid-area: select1;
+          }
+          
+          .label2 {
+            align-self: center;
+            grid-area: label2;
+          }
+          
+          .select2{
+            align-self: center;
+            grid-area: select2;
+          }
+          
+          .label3 {
+            align-self: center;
+            grid-area: label3;
+          }
+          
+          .select3{
+            align-self: center;
+            grid-area: select3;
+          }
+          
+          .label4 {
+            align-self: center;
+            grid-area: label4;
+          }
+          
+          .select4{
+            align-self: center;
+            grid-area: select4;
+          }
+          
+          .label5 {
+            align-self: center;
+            grid-area: label5;
+          }
+          
+          .select5{
+            align-self: center;
+            grid-area: select5;
+          }
+          
+          .label6 {
+            align-self: center;
+            grid-area: label6;
+          }
+          
+          .select6{
+            align-self: center;
+            grid-area: select6;
+          }
+          
+          .label7 {
+            align-self: center;
+            grid-area: label7;
+          }
+          
+          .select7{
+            align-self: center;
+            grid-area: select7;
+          }
+          
+          .submitButton{
+            grid-area: submitButton;
+          }
+          
+          label {
+            padding-top: 0px;
+          }
+          
+          select {
+            margin-bottom: 0px;
+          }
+          
+          .elBreak{
+            margin-left: 10px;
+            margin-bottom: 0px;
+            
+          }
+      }
+    }
+  }
+  
+  }

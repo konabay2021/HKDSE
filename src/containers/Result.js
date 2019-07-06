@@ -8,6 +8,7 @@ import { viewChosenSubject } from '../actions/index'
 import { dataReducer } from '../actions/index';
 import { bindActionCreators } from "redux";
 import axios from "axios";
+import Chart from 'react-apexcharts'
 import "./Result.scss"
 
 class Result extends Component {
@@ -30,6 +31,18 @@ class Result extends Component {
             .catch((error) => {
                 console.log(error);
             });
+
+        const links = Object.values(link)
+        links.map(link => {
+            fetch(link)
+                .then((response) => {
+                    return response.json()
+                })
+                .then((myJson) => {
+                    console.log(myJson);
+                    this.setState({ myJson })
+                });
+        })
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -163,7 +176,7 @@ class Result extends Component {
 
                     <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.cal4CXX(this.props.callScore, "4C2X").subject, this.props.callScore)} >4C 2X: {formula.cal4CXX(this.props.callScore, "4C2X").score} </h5>
                     <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.calBest5(this.props.callScore).subject, this.props.callScore)} >Best 5: {formula.calBest5(this.props.callScore).score} </h5>
-                    <button className="btn btn-secondary changeButton" onClick={() => this.props.history.push("/")}>Back To Home Page</button>
+                    <button className="btn btn-secondary changeButton" onClick={() => { this.props.history.push("/"); window.scrollTo(0, 0) }}>Back To Home Page</button>
                     <button className="btn btn-secondary changeButton" onClick={this.handleEditClick}>Change Input Score</button>
                     <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("HKU"))}>HKU</button>
                     <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("CUHK"))}>CUHK</button>
@@ -205,13 +218,85 @@ class Result extends Component {
 
     }
 
+    findPosition = () => {
+        let score = formula.calBest5(this.props.callScore).score
+        let data = [12, 15, 18, 21, 24, 27, 30, 33, 35]
+        let student = [21262, 21149, 19394, 14060, 7650, 3803, 1788, 687, 151]
+        let checkBasicReq = formula.checkBasicRequirements("3322", this.props.callScore, "")
+        if (checkBasicReq.reason !== "") {
+            return "You do not fulfill the basic requirements (core subjects at 3322 or better)";
+        }
+        for (let i = 0; i < 9; i++) {
+            if (score <= data[i]) {
+                if (i === 0)
+                    return 21262
+                return Math.round(student[i] + (student[i - 1] - student[i]) / (data[i] - data[i - 1]) * (data[i] - score))
+            }
+
+        }
+
+    }
+
+
 
     render() {
+        const chartOptions = {
+            chart: {
+                id: 'Chart1',
+                background: 'white',
+            },
+            yaxis: [{
+                min: 0,
+                title: {
+                    text: "Number of students",
+                    style: {
+                        fontSize: '18px',
+                    }
+                },
+            }],
+            xaxis: {
+                categories: [12, 15, 18, 21, 24, 27, 30, 33, 35],
+                title: {
+                    text: "Best 5 Score Higer Than",
+                    style: {
+                        fontSize: '18px',
+                    }
+                },
+            }
+        }
+        const chartSeries = [{
+            name: 'Intake(Band A)',
+            data: [21262, 21149, 19394, 14060, 7650, 3803, 1788, 687, 151]
+            //source: http://www.hkeaa.edu.hk/DocLibrary/Media/PR/DSE2018_Press_Release_Chinese_full_version.pdf
+        }]
         return (
-            <div className="gridContainer">
-                {this.state.edit === false ? <div>{this.scoreTable()}</div> : <div>{this.editScoreTable()}</div>}
-                {this.isEmpty(this.props.uniData[this.state.render]) ? <h4 className="loading">Loading...</h4> : this.loadUniDataTable()}
+            <div className="resultContainer">
+                <div className="dataAnalysis">
+                    <div className="chart ">
+                        <div className="chartIntro paper">
+                            <h5>Below shows the grade point distribution in the best five subjects (given the core subjects at 3322 or better) </h5>
+                            <Chart className="" options={chartOptions} series={chartSeries} type="line" height="400" />
+                        </div>
+                        
+                        <div className="description paper">
+                            <h5>Quick Data Anaylsis</h5>
+                            <p>Your Position: <strong>{this.findPosition()}</strong> out of 21262 (In terms of Best 5 Subjects, neglecting subject weighting) </p>
+                            <br />
+                            <p>Quick Fact: </p>
+                            <p>1) There are <strong>16,538</strong> Bachelor's Degree Programmes (include OUHK and SSSDP) available in JUPAS in 2018</p>
+                            <p>1) There are <strong>3,581</strong> Associate Degree / Higher Diploma Programmes available in JUPAS in 2018</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div className="gridContainer">
+                    {this.state.edit === false ? <div>{this.scoreTable()}</div> : <div>{this.editScoreTable()}</div>}
+                    {this.isEmpty(this.props.uniData[this.state.render]) ? <h4 className="loading">Loading...</h4> : this.loadUniDataTable()}
+                </div>
+
             </div>
+
         );
     }
 }

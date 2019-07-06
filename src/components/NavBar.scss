@@ -1,0 +1,45 @@
+.nav {
+    height: 70px;
+    background: #404040;
+    color: rgb(223, 223, 223);
+    border-bottom: 3px solid #333;
+    box-shadow: 0 0 35px rgba(64,64,64, 0.2);
+    z-index: 10;
+    transition: height 600ms 0s ease;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    .container {
+        max-width: 1260px;
+        list-style: none;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: right;
+        .logoLink{
+            color: rgb(223, 223, 223);
+            .logo {
+                left: 0;
+                position: absolute;
+                line-height: 70px;
+            }
+            &:hover{
+                color: rgb(255, 255, 255);
+            }
+        }
+        
+        .link {
+            margin: 0 50px 0 0;
+            text-decoration: none;
+            line-height: 70px;
+            font-weight: 500;
+            font-size: 16px;
+            display: inline-block;
+            color: rgb(223, 223, 223);
+            &:hover{
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+}

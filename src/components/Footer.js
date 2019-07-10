@@ -17,7 +17,6 @@ const Footer = () => {
                 <div className="right">
                     <a href="https://github.com/justinsochi/HKDSE"><p>Source Code</p></a>
                     <a href="https://justinsochi.github.io/"><p>My Personal Page</p></a>
-
                 </div>
             </div>
 

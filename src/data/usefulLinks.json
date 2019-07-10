@@ -1,0 +1,155 @@
+{
+    "usefulLinks": {
+        "HKEAA Press Release": [
+            {
+                "name": "2019 Hong Kong Diploma of Secondary Education Examination Results Released",
+                "url": "http://www.hkeaa.edu.hk/DocLibrary/Media/PR/DSE19_Press_Release_Eng.pdf"
+            },
+            {
+                "name": "2018 Hong Kong Diploma of Secondary Education Examination Results Released",
+                "url": "http://www.hkeaa.edu.hk/DocLibrary/Media/PR/DSE2018_Press_Release_English_full_version.pdf"
+            },
+            {
+                "name": "2017 Hong Kong Diploma of Secondary Education Examination Results Released",
+                "url": "http://www.hkeaa.edu.hk/DocLibrary/Media/PR/20170711_Results_HKDSE_FULL_ENG.pdf"
+            },
+            {
+                "name": "2016 Hong Kong Diploma of Secondary Education Examination Results Released",
+                "url": "http://www.hkeaa.edu.hk/DocLibrary/Media/PR/20160712_HKDSE_FULL_Results_ENG.pdf"
+            }
+        ],
+        "HKDSE Cut-off Score (All Subjects)": [
+            {
+                "name":"2018",
+                "url":"http://lsforum.net/board/viewthread.php?tid=285376"
+            },
+            {
+                "name":"2017",
+                "url":"http://lsforum.net/board/viewthread.php?tid=281274"
+            },
+            {
+                "name":"2016",
+                "url":"http://lsforum.net/board/viewthread.php?tid=274682"
+            },
+            {
+                "name":"2015",
+                "url":"http://lsforum.net/board/viewthread.php?tid=264760&page=2"
+            },
+            {
+                "name":"2014",
+                "url":"http://lsforum.net/board/viewthread.php?tid=250917&extra=page%3D1&page=12"
+            },
+            {
+                "name":"2013",
+                "url":"http://lsforum.net/board/thread-230887-1-1.html"
+            },
+            {
+                "name":"2012",
+                "url":"https://lsforum.net/board/viewthread.php?tid=207784&extra=&page=2"
+            }
+        ],
+        "Official Syllabus": [
+            {
+                "name":"Chinese Language",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/ChiLang_CAGuide_2015.pdf"
+            },
+            {
+                "name":"English Language",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/EngLang_CAGuide_2015.pdf"
+            },
+            {
+                "name":"Mathematics",
+                "url":"http://334.edb.hkedcity.net/new/doc/eng/curriculum2017/Math%20C%26A%20Guide_2017_e.pdf"
+            },
+            {
+                "name":"Liberal Studies",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/LS_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Chinese Literature",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/ChiLit_CAGuide_2015.pdf"
+            },
+            {
+                "name":"Literature in English",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/EngLit_CAGuide_2015.pdf"
+            },
+            {
+                "name":"Chinese History",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/CHist_CAGuide_2015.pdf"
+            },
+            {
+                "name":"Economics",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/Econ_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Ethics and Religious Studies",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/ERS_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Geography",
+                "url":"http://334.edb.hkedcity.net/new/doc/eng/curriculum2017/Geog_C&A_Guide_e-Nov_2017.pdf"
+            },
+            {
+                "name":"History",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/Hist_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Tourism and Hospitality Studies",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/THS_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Biology",
+                "url":"http://334.edb.hkedcity.net/new/doc/chi/curriculum2015/Bio_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Chemistry",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/Chem_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Physics",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/Phy_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Science: Combined Science",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/CS_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Science: Integrated Science",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/IS_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Business, Accounting and Financial Studies",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/BAFS_CA_Guide_e_2015.pdf"
+            },
+            {
+                "name":"Design and Applied Technology",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/DAT_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Health Management and Social Care",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/HMSC_CA_Guide_e_2015.pdf"
+            },
+            {
+                "name":"Information and Communication Technology",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/ICT_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Technology and Living",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/TL_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Music",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/Music_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Visual Arts",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/VA_CAGuide_e_2015.pdf"
+            },
+            {
+                "name":"Physical Education",
+                "url":"https://334.edb.hkedcity.net/new/doc/chi/curriculum2015/PE_CAGuide_e_2015.pdf"
+            }
+        ]
+
+    }
+}

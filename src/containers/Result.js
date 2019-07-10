@@ -10,7 +10,7 @@ import { bindActionCreators } from "redux";
 import axios from "axios";
 import Chart from 'react-apexcharts'
 import "./Result.scss"
-
+import Footer from "../components/Footer"
 class Result extends Component {
     constructor(props) {
         super(props);
@@ -277,7 +277,7 @@ class Result extends Component {
                             <h5>Below shows the grade point distribution in the best five subjects (given the core subjects at 3322 or better) </h5>
                             <Chart className="" options={chartOptions} series={chartSeries} type="line" height="400" />
                         </div>
-                        
+
                         <div className="description paper">
                             <h5>Quick Data Anaylsis</h5>
                             <p>Your Position: <strong>{this.findPosition()}</strong> out of 21262 (In terms of Best 5 Subjects, neglecting subject weighting) </p>
@@ -294,7 +294,7 @@ class Result extends Component {
                     {this.state.edit === false ? <div>{this.scoreTable()}</div> : <div>{this.editScoreTable()}</div>}
                     {this.isEmpty(this.props.uniData[this.state.render]) ? <h4 className="loading">Loading...</h4> : this.loadUniDataTable()}
                 </div>
-
+                <Footer />
             </div>
 
         );

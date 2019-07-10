@@ -10,7 +10,7 @@ import axios from "axios";
 import {
   Link
 } from 'react-router-dom'
-
+import Footer  from "../components/Footer"
 //InputPage.
 
 class InputPage extends Component {
@@ -75,6 +75,7 @@ class InputPage extends Component {
   }
 
   componentDidMount() {
+    window.scroll(0,0)
     const links = Object.values(link)
     fetch('https://api.github.com/repos/facebook/create-react-app/contributors')
       .then(res => res.json())
@@ -163,6 +164,7 @@ class InputPage extends Component {
           </form>
 
         </div>
+        <Footer />
       </div>
 
     );

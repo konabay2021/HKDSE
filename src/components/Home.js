@@ -1,11 +1,9 @@
 import React from "react"
 import { Link } from 'react-router-dom'
 import "./Home.scss"
-
-const Home = (props) => {
-
-
-
+import Footer  from "../components/Footer"
+const Home = () => {
+    window.scroll(0,0)
     return (
         <React.Fragment>
             <div className="homeContainer">
@@ -87,7 +85,7 @@ const Home = (props) => {
 
                     </div>
                 </div>
-
+                <Footer/>
             </div>
 
 

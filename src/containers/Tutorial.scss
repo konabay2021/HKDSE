@@ -1,0 +1,62 @@
+.background {
+  background: white;
+}
+
+
+
+.tutorialContainer {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  //   p {
+  //     overflow: hidden;
+  //     text-overflow: clip;
+  //   }
+
+  .leftMenu {
+    padding: 25px 5px 0 0;
+    max-height: calc(100vh - 70px);
+    overflow: auto;
+    flex-basis: 30%;
+
+    .playlistContainer {
+      padding-left: 0;
+      .playlist {
+        display: flex;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        cursor: pointer;
+        &:hover {
+          background: rgb(235, 235, 235);
+        }
+        img {
+          padding-right: 15px;
+          width: auto;
+          height: auto;
+          display: block;
+          max-width: 135px;
+          max-height: 90px;
+        }
+      }
+    }
+  }
+  .rightMedia {
+    // max-height: calc(100vh - 70px);
+    padding: 25px 5px 0 10px;
+    overflow: auto;
+    flex-basis: 70%;
+    .videoPlayer {
+    }
+    .des {
+      padding: 15px 0;
+      width: 90%;
+      margin: 0 auto;
+      p {
+        white-space: pre-line;
+      }
+    }
+  }
+}

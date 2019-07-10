@@ -2,7 +2,7 @@ import React from "react";
 import onClickOutside from 'react-onclickoutside';
 import ModalTable from "./ModalTable";
 import ModalChart from "./ModalChart";
-import './Modal.css';
+import './Modal.scss';
 
 
 class Modal extends React.Component {

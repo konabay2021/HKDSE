@@ -2,23 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { CSSTransition } from 'react-transition-group'
+import { BrowserRouter, Route, Switch, } from "react-router-dom";
+import {TransitionGroup, CSSTransition } from 'react-transition-group'
 import reducers from "./reducers";
+import { AnimatedSwitch } from 'react-router-transition';
+
 import Result from './containers/Result';
 import Home from './components/Home';
 import InputPage from './containers/InputPage';
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer"
-import { AnimatedSwitch } from 'react-router-transition';
+import Tutorial from "./containers/Tutorial"
+import Resources from "./components/Resources"
 
-import './style/style.css'
+
+import './style/style.scss'
 import * as serviceWorker from "./serviceWorker"
 const routes = [
     { path: '/result', name: 'Result', Component: Result },
     { path: '/', name: 'Home', Component: Home },
 
 ]
+
 const Workaround = ({ action, children }) =>
     action === 'REPLACE' ? null : children
 ReactDOM.render(
@@ -29,11 +33,11 @@ ReactDOM.render(
                 by Ray */}
             <React.Fragment>
                 <NavBar />
-                <AnimatedSwitch
+                 <AnimatedSwitch
                     atEnter={{ opacity: 0 }}
-                    atLeave={{ opacity: 0 }}
+                    atLeave={{ opacity: 1 }}
                     atActive={{ opacity: 1 }}
-                    className="switch-wrapper44 index-container"
+                    className="switch-wrapper44 index-container" 
                 >
 
 
@@ -41,10 +45,14 @@ ReactDOM.render(
                 <Route path="/HKDSE" component={Home} /> */}
                     <Route path="/result" component={Result} />
                     <Route path="/input" component={InputPage} />
+                    <Route path={`/tutorial/:topicId/:topicId`}  component={Tutorial} />
+                    <Route path={`/tutorial/:topicId`}  component={Tutorial} />
+                    <Route path="/tutorial" exact component={Tutorial} />
+                    <Route path={`/resources/:topicId`}  component={Tutorial} />
+                    <Route path="/resources" exact component={Resources} />
                     <Route path="/" component={Home} />
                     
                 </AnimatedSwitch>
-                <Footer />
 
             </React.Fragment>
             {/*                     

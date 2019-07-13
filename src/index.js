@@ -25,10 +25,11 @@ const routes = [
 
 const Workaround = ({ action, children }) =>
     action === 'REPLACE' ? null : children
+    console.log(process.env.PUBLIC_URL)
 ReactDOM.render(
     <Provider store={createStore(reducers)}>
 
-        <BrowserRouter>
+        <BrowserRouter >
             {/* <div>Header</div>
                 by Ray */}
             <React.Fragment>
@@ -43,14 +44,14 @@ ReactDOM.render(
 
                     {/* <Route path="/HKDSE/result" component={Result} />
                 <Route path="/HKDSE" component={Home} /> */}
-                    <Route path="/result" component={Result} />
-                    <Route path="/input" component={InputPage} />
-                    <Route path={`/tutorial/:topicId/:topicId`}  component={Tutorial} />
-                    <Route path={`/tutorial/:topicId`}  component={Tutorial} />
-                    <Route path="/tutorial" exact component={Tutorial} />
-                    <Route path={`/resources/:topicId`}  component={Tutorial} />
-                    <Route path="/resources" exact component={Resources} />
-                    <Route path="/" component={Home} />
+                    <Route path={`${process.env.PUBLIC_URL}/result`} component={Result} />
+                    <Route path={`${process.env.PUBLIC_URL}/input`} component={InputPage} />
+                    <Route path={`${process.env.PUBLIC_URL}/tutorial/:topicId/:topicId`}  component={Tutorial} />
+                    <Route path={`${process.env.PUBLIC_URL}/tutorial/:topicId`}  component={Tutorial} />
+                    <Route path={`${process.env.PUBLIC_URL}/tutorial`} exact component={Tutorial} />
+                    <Route path={`${process.env.PUBLIC_URL}/resources/:topicId`}  component={Resources} />
+                    <Route path={`${process.env.PUBLIC_URL}/resources`} exact component={Resources} />
+                    <Route path={`${process.env.PUBLIC_URL}/`} component={Home} />
                     
                 </AnimatedSwitch>
 

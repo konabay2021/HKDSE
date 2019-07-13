@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {calFormula, checkBasicRequirements } from "../components/formula";
+import { calFormula, checkBasicRequirements } from "../components/formula";
 import { viewChosenSubject } from '../actions/index';
 import { dataReducer } from '../actions/index';
-import {modalState} from "../actions/index";
+import { modalState } from "../actions/index";
 import { bindActionCreators } from "redux";
 import Modal from "../components/Modal";
-import "./AdmissionScoreTable.css"
+import "./AdmissionScoreTable.scss"
 
 class AdmissionScoreTable extends Component {
     constructor(props) {
@@ -20,25 +20,25 @@ class AdmissionScoreTable extends Component {
     }
 
     //Pass the subjects and scores that are chosen in different calculation formula to Action Creator to display to the user which subjects are selected
-    eventHandler = (subject, callScore,modalContent,reason) => {
-        if(reason === "" || reason === undefined){
+    eventHandler = (subject, callScore, modalContent, reason) => {
+        if (reason === "" || reason === undefined) {
             this.setState({
                 showSubject: !this.state.showSubject
             })
-            if(this.state.showSubject){
+            if (this.state.showSubject) {
                 this.props.viewChosenSubject(subject, callScore)
             }
-            else{
-                this.props.viewChosenSubject([null],callScore)
+            else {
+                this.props.viewChosenSubject([null], callScore)
             }
         }
         else {
-            this.displayModal(modalContent,reason)
+            this.displayModal(modalContent, reason)
         }
     }
 
     //display modal when clicked
-    displayModal = (modalContent,reason) => {
+    displayModal = (modalContent, reason) => {
         this.props.modalState("block")
         document.body.classList.add('modal-open')
         this.setState({
@@ -79,10 +79,11 @@ class AdmissionScoreTable extends Component {
                 >
                     <td className="tableDisable">{data.Code}</td>
                     <td className="tableCourse cellOnClick" onClick={(e) => this.displayModal(data, yourScore[index].reason)}>{data.Course}</td>
-                    <td className="cellOnClick" onClick={(e) => this.displayModal(data,yourScore[index].reason)} >{data.Method}</td>
+                    <td className="cellOnClick tableDisable" onClick={(e) => this.displayModal(data, yourScore[index].reason)} >{data.Method}</td>
+                    {(this.props.school === "HKU" || this.props.school === "CUHK") && <td>{data.EXScore}</td>}
                     <td> {data.MedianScore} </td>
                     <td> {data.LQScore} </td>
-                    <td className="cellOnClick" style={{ color: color }} onClick={(e) => this.eventHandler(yourScore[index].subject,this.props.callScore,data,yourScore[index].reason)}>{yourScore[index].score}</td>
+                    <td className="cellOnClick" style={{ color: color }} onClick={(e) => this.eventHandler(yourScore[index].subject, this.props.callScore, data, yourScore[index].reason)}>{yourScore[index].score}</td>
                 </tr>
             );
         });
@@ -110,14 +111,15 @@ class AdmissionScoreTable extends Component {
                         <tr>
                             <th className="tableDisable">Jupas Code</th>
                             <th className="tableCourse">Course</th>
-                            <th>Method</th>
+                            <th className="tableDisable">Method</th>
+                            {(this.props.school === "HKU" || this.props.school === "CUHK") && <th>Expected Score</th>}
                             <th>Median</th>
                             <th>LQ</th>
                             <th className="tableScore">Your Score</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.renderList() } 
+                        {this.renderList()}
                     </tbody>
                 </table>
             </div>

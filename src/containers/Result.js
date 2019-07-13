@@ -19,7 +19,9 @@ class Result extends Component {
             data: "",
             edit: false,
             link: link.HKU,
-            showScoreTable: true
+            showScoreTable: true,
+            callScore: props.callScore,
+            adjusted: false
         };
     }
 
@@ -39,10 +41,11 @@ class Result extends Component {
                     return response.json()
                 })
                 .then((myJson) => {
-                    console.log(myJson);
                     this.setState({ myJson })
                 });
         })
+        this.setState({callScore:this.scoreAdjustment()})
+       
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -58,14 +61,17 @@ class Result extends Component {
                     console.log(error);
                 });
         }
+        if (this.state.render !== prevState.render || this.state.edit !== prevState.edit) {
+            this.setState({callScore:this.scoreAdjustment()})
+          }
     }
 
     //submit the user editted score to action creator
     handleFormSubmit = (event) => {
-        this.props.callScore.map((data, index) => {
+        this.state.callScore.map((data, index) => {
             return data.score = parseInt(event.target[index].value, 10)
         })
-        this.props.calScore(this.props.callScore)
+        this.props.calScore(this.state.callScore)
         event.preventDefault();
         this.setState({ edit: !this.state.edit });
     }
@@ -109,7 +115,7 @@ class Result extends Component {
 
     //dynamically load the user's inputted score
     loadInputScore = () => {
-        return this.props.callScore.map((data, index) => {
+        return this.state.callScore.map((data, index) => {
             return (
                 <tr className="scoreTableTr" key={data.subject} style={{ backgroundColor: this.props.viewChosenSubject[index] }}>
                     <td ><h6>{data.subject}</h6></td>
@@ -122,12 +128,12 @@ class Result extends Component {
     //Load a table for the user to edit their inputted score when the button "edit" is clicked
     loadEditScore = () => {
         let name = ["chiScore", "engScore", "mathScore", "lsScore", "el1Score", "el2Score", "el3Score"]
-        return this.props.callScore.map((data, index) => {
+        return this.state.callScore.map((data, index) => {
             return (
                 <tr className="scoreTableTr" key={data.subject}>
                     <td ><h6>{data.subject}</h6></td>
                     <td>
-                        <select className="form-control" name={name[index]} defaultValue={data.score}>
+                        <select className="form-control" name={name[index]} defaultValue={this.scoreAdjustment(true)[index].score}>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -174,8 +180,8 @@ class Result extends Component {
                         </tbody>
                     </table>
 
-                    <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.cal4CXX(this.props.callScore, "4C2X").subject, this.props.callScore)} >4C 2X: {formula.cal4CXX(this.props.callScore, "4C2X").score} </h5>
-                    <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.calBest5(this.props.callScore).subject, this.props.callScore)} >Best 5: {formula.calBest5(this.props.callScore).score} </h5>
+                    <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.cal4CXX(this.state.callScore, "4C2X").subject, this.state.callScore)} >4C 2X: {formula.cal4CXX(this.state.callScore, "4C2X").score} </h5>
+                    <h5 className="tableTitle cellOnClick" onClick={(e) => this.viewSubjectHandler(formula.calBest5(this.state.callScore).subject, this.state.callScore)} >Best 5: {formula.calBest5(this.state.callScore).score} </h5>
                     <button className="btn btn-secondary changeButton" onClick={() => { this.props.history.push("/"); window.scrollTo(0, 0) }}>Back To Home Page</button>
                     <button className="btn btn-secondary changeButton" onClick={this.handleEditClick}>Change Input Score</button>
                     <button className="btn btn-light schoolButton" onClick={(e) => this.handleClick(("HKU"))}>HKU</button>
@@ -219,10 +225,10 @@ class Result extends Component {
     }
 
     findPosition = () => {
-        let score = formula.calBest5(this.props.callScore).score
+        let score = formula.calBest5(this.state.callScore).score
         let data = [12, 15, 18, 21, 24, 27, 30, 33, 35]
         let student = [21262, 21149, 19394, 14060, 7650, 3803, 1788, 687, 151]
-        let checkBasicReq = formula.checkBasicRequirements("3322", this.props.callScore, "")
+        let checkBasicReq = formula.checkBasicRequirements("3322", this.state.callScore, "")
         if (checkBasicReq.reason !== "") {
             return "You do not fulfill the basic requirements (core subjects at 3322 or better)";
         }
@@ -232,11 +238,55 @@ class Result extends Component {
                     return 21262
                 return Math.round(student[i] + (student[i - 1] - student[i]) / (data[i] - data[i - 1]) * (data[i] - score))
             }
-
         }
+    }
+    
+    scoreAdjustment = (edit) => {
+        let {callScore, render} = this.state
+        let score = JSON.parse(JSON.stringify(callScore));
+        if ((render === "HKU" || render === "CUHK") && !edit){
+            this.setState({adjusted: true})
+            score.map(e => {
+                switch(e.score){
+                    case 5:
+                    e.score = 5.5
+                    break;
+                    case 6:
+                    e.score = 7
+                    break;
+                    case 7:
+                    e.score = 8.5
+                    break;
+                    default:
+                    break
+                }
+            })
+        }
+        else{
+            score.map(e => {
+                if(this.state.adjusted){
+                    this.setState({adjusted: false})
+                    switch(e.score){
+                        case 5.5:
+                        e.score = 5
+                        break;
+                        case 7:
+                        e.score = 6
+                        break;
+                        case 8.5:
+                        e.score = 7
+                        break;
+                        default:
+                        break
+                    }
+                }
+              
+            })
+        }
+        this.props.calScore(score)
+        return score
 
     }
-
 
 
     render() {
@@ -273,6 +323,16 @@ class Result extends Component {
             <div className="resultContainer">
                 <div className="dataAnalysis">
                     <div className="chart ">
+                        <div className="paper notice">
+                            <p>1) Please check the weighting of different courses by clicking on the course name</p>
+                            <p>2) Due to a lack of information from University, unless otherwise specified, all score showing in the table are row score (i.e. Score without weighting) </p>
+                            <p>3) For HKU and CUHK, There are official expected score (calculated in 5** = 8.5, 5* = 7, 5 = 5.5), while the Median and LQ score are last year's figure, calculated on last year's scale (5** = 7, 5* = 6, 5 = 5)</p>
+                            <p>4) For UST, the Median and LQ Score, as well as the calculated score, are weighted score </p>
+                            <p>5) For CITYU and LINGU, the Median and LQ Score showed are weighted score, but the score calculated have not applied weighting yet. Please calculate your weighted score by 
+                                refering to the subject weighting page (by clicking on the course name).
+                            </p>
+                            
+                        </div>
                         <div className="chartIntro paper">
                             <h5>Below shows the grade point distribution in the best five subjects (given the core subjects at 3322 or better) </h5>
                             <Chart className="" options={chartOptions} series={chartSeries} type="line" height="400" />
@@ -284,7 +344,7 @@ class Result extends Component {
                             <br />
                             <p>Quick Fact: </p>
                             <p>1) There are <strong>16,538</strong> Bachelor's Degree Programmes (include OUHK and SSSDP) available in JUPAS in 2018</p>
-                            <p>1) There are <strong>3,581</strong> Associate Degree / Higher Diploma Programmes available in JUPAS in 2018</p>
+                            <p>2) There are <strong>3,581</strong> Associate Degree / Higher Diploma Programmes available in JUPAS in 2018</p>
                         </div>
                     </div>
 
@@ -303,7 +363,6 @@ class Result extends Component {
 
 function mapStateToProps(state) {
     // Whatever is returned will show up as props
-    // inside of BookList
     return {
         callScore: state.callScore,
         viewChosenSubject: state.viewChosenSubject,
@@ -314,7 +373,7 @@ function mapStateToProps(state) {
 
 
 function mapDispatchToProps(dispatch) {
-    // Whenever selectBook is called, the result shoudl be passed
+    // Whenever the followings are called, the result should be passed
     // to all of our reducers
     return bindActionCreators({
         viewChosenSubject1: viewChosenSubject,

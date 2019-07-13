@@ -12,6 +12,18 @@
     padding-top: 50px;
     .chart {
       margin: 0 2.5%;
+      .notice {
+        p{
+          font-size: 1.2em;
+          margin: 5px 25px;
+          &:first-child {
+            padding-top: 25px;
+          }
+          &:last-child {
+            padding-bottom: 25px;
+          }
+        }
+      }
       .chartIntro h5 {
         padding-top: 15px;
         text-align: center;
@@ -71,7 +83,7 @@
       text-align: center !important;
       padding-top: 10px;
       padding-bottom: 10px;
-      width: 12%;
+      // width: 12%;
       word-break: break-word;
     }
   }

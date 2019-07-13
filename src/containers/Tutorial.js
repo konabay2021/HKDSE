@@ -14,9 +14,10 @@ class Tutorial extends Component {
     }
     
     renderPlayList = async () => {
-        const subjectPlaylist = allPlayList[this.props.match.url.split("/")[2]]
+        const urlPara = this.props.match.url.split("/")
+        const subjectPlaylist = allPlayList[urlPara[urlPara.length-2]]
         let id = subjectPlaylist.find((e) => {
-            if (e.name === this.props.match.url.split("/")[3])
+            if (e.name === urlPara[urlPara.length-1])
                 return e
         })
         const config = {
@@ -40,15 +41,21 @@ class Tutorial extends Component {
                 <ul className="playlistContainer">
                     {playlist.items.map(e => {
                         return (
-                            <li className="playlist" key={e.snippet.resourceId.videoId} onClick={() => this.setState({ id: e.snippet.resourceId.videoId, des: e.snippet.description })}>
+                            <li className="playlist" key={e.snippet.resourceId.videoId} onClick={() => this.onClickEventHandler(e)}>
                                 <img src={e.snippet.thumbnails.default.url}></img>
                                 <p>{e.snippet.title}</p>
                             </li>)
                     })
                     }
-
                 </ul >
             )
+    }
+
+    onClickEventHandler = (e) => {   
+        if (window.innerWidth < 1024){
+            window.scroll(0,0)
+        }
+        this.setState({ id: e.snippet.resourceId.videoId, des: e.snippet.description })
     }
 
 
@@ -71,26 +78,26 @@ class Tutorial extends Component {
 
     async componentDidMount() {
         window.scroll(0,0)
-        this.props.match.path === "/tutorial/:topicId/:topicId" && this.renderPlayList()
+        this.props.match.path === `${process.env.PUBLIC_URL}/tutorial/:topicId/:topicId` && this.renderPlayList()
         // next page: add  "&pageToken=" +nextPageToken
     }
     render() {
-
+        console.log(process.env.PUBLIC_URL, this.props.match.path)
         let {
             playlist,
         } = this.state
         let { match } = this.props
-        {console.log(match.path)}
         return (
             <div className="background">
                 {/* <h1>{this.props.match.params.topicId}</h1> */}
-                {match.path !== "/tutorial/:topicId/:topicId" && 
+                {match.path !== `${process.env.PUBLIC_URL}/tutorial/:topicId/:topicId` && 
                     <ListTemplate 
                         match={match}
                     />}
                 
 
-                {match.path === "/tutorial/:topicId/:topicId" && <div className="tutorialContainer">
+                {match.path === `${process.env.PUBLIC_URL}/tutorial/:topicId/:topicId` && 
+                <div className="tutorialContainer">
                     <div className="leftMenu">
                         {this.showPlayList()}
                     </div>

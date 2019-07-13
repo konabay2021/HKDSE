@@ -66,7 +66,7 @@ class InputPage extends Component {
 
       this.setState({invalidSubjectInput: false})
       // this.props.history.push("/HKDSE/result");
-      this.props.history.push("/result");
+      this.props.history.push(`${process.env.PUBLIC_URL}/result`);
       window.scrollTo(0, 0)
     }
     event.preventDefault();

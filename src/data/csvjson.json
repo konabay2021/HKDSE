@@ -3,6 +3,7 @@
     {
       "Code": "JS6004",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 30,
       "MedianScore": 28,
       "LQScore": 26,
@@ -46,6 +47,7 @@
     {
       "Code": "JS6016",
       "Method": "Best 5",
+      "EXScore": "30",
       "UQScore": 30,
       "MedianScore": 28,
       "LQScore": 28,
@@ -89,6 +91,7 @@
     {
       "Code": "JS6028",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 27,
       "LQScore": 26,
@@ -132,6 +135,7 @@
     {
       "Code": "JS6030",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 28,
       "MedianScore": 26,
       "LQScore": 25,
@@ -175,6 +179,7 @@
     {
       "Code": "JS6042",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 27,
       "MedianScore": 27,
       "LQScore": 25,
@@ -218,6 +223,7 @@
     {
       "Code": "JS6054",
       "Method": "Best 5",
+      "EXScore": "23",
       "UQScore": 25,
       "MedianScore": 24,
       "LQScore": 23,
@@ -261,6 +267,7 @@
     {
       "Code": "JS6767",
       "Method": "4C2X",
+      "EXScore": "27",
       "UQScore": 30,
       "MedianScore": 29,
       "LQScore": 28,
@@ -304,6 +311,7 @@
     {
       "Code": "JS6781",
       "Method": "4C2X",
+      "EXScore": "28",
       "UQScore": 31,
       "MedianScore": 29,
       "LQScore": 29,
@@ -347,6 +355,7 @@
     {
       "Code": "JS6793",
       "Method": "4C2X",
+      "EXScore": "28",
       "UQScore": 30,
       "MedianScore": 28,
       "LQScore": 26,
@@ -390,6 +399,7 @@
     {
       "Code": "JS6808",
       "Method": "4C2X",
+      "EXScore": "39",
       "UQScore": 38,
       "MedianScore": 36,
       "LQScore": 35,
@@ -433,6 +443,7 @@
     {
       "Code": "JS6860",
       "Method": "Best 6",
+      "EXScore": "34",
       "UQScore": 34,
       "MedianScore": 33,
       "LQScore": 32,
@@ -461,6 +472,7 @@
     {
       "Code": "JS6884",
       "Method": "Best 6",
+      "EXScore": "36",
       "UQScore": 35,
       "MedianScore": 34,
       "LQScore": 33,
@@ -504,6 +516,7 @@
     {
       "Code": "JS6896",
       "Method": "4C2X",
+      "EXScore": "43",
       "UQScore": 39,
       "MedianScore": 38,
       "LQScore": 38,
@@ -547,6 +560,7 @@
     {
       "Code": "JS6107",
       "Method": "Best 6",
+      "EXScore": "42",
       "UQScore": 38,
       "MedianScore": 37,
       "LQScore": 36,
@@ -590,6 +604,7 @@
     {
       "Code": "JS6066",
       "Method": "Best 5",
+      "EXScore": "23",
       "UQScore": 26,
       "MedianScore": 24,
       "LQScore": 23,
@@ -633,6 +648,7 @@
     {
       "Code": "JS6080",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 25,
       "MedianScore": 25,
       "LQScore": 24,
@@ -676,6 +692,7 @@
     {
       "Code": "JS6092",
       "Method": "Best 5",
+      "EXScore": "N/A(New Program)",
       "UQScore": "N/A(New Program)",
       "MedianScore": "N/A(New Program)",
       "LQScore": "N/A(New Program)",
@@ -695,6 +712,7 @@
     {
       "Code": "JS6119",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 26,
       "MedianScore": 25,
       "LQScore": 24,
@@ -738,6 +756,7 @@
     {
       "Code": "JS6157",
       "Method": "Best 6",
+      "EXScore": "35",
       "UQScore": 35,
       "MedianScore": 35,
       "LQScore": 34,
@@ -781,6 +800,7 @@
     {
       "Code": "JS6195",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 26,
       "MedianScore": 26,
       "LQScore": 25,
@@ -824,6 +844,7 @@
     {
       "Code": "JS6925",
       "Method": "Best 5",
+      "EXScore": "29",
       "UQScore": 29,
       "MedianScore": 28,
       "LQScore": 27,
@@ -849,6 +870,7 @@
     {
       "Code": "JS6951",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 28,
       "MedianScore": 26,
       "LQScore": 25,
@@ -892,6 +914,7 @@
     {
       "Code": "JS6963",
       "Method": "Best 5",
+      "EXScore": "23",
       "UQScore": 25,
       "MedianScore": 24,
       "LQScore": 23,
@@ -935,6 +958,7 @@
     {
       "Code": "JS6078",
       "Method": "4C2X",
+      "EXScore": "37",
       "UQScore": 34,
       "MedianScore": 34,
       "LQScore": 33,
@@ -978,6 +1002,7 @@
     {
       "Code": "JS6406",
       "Method": "4C2X",
+      "EXScore": "37",
       "UQScore": 35,
       "MedianScore": 34,
       "LQScore": 33,
@@ -1021,6 +1046,7 @@
     {
       "Code": "JS6456",
       "Method": "Best 6",
+      "EXScore": "N/A",
       "UQScore": 40,
       "MedianScore": 39,
       "LQScore": 38,
@@ -1064,6 +1090,7 @@
     {
       "Code": "JS6468",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 25,
       "MedianScore": 24,
       "LQScore": 23,
@@ -1107,6 +1134,7 @@
     {
       "Code": "JS6482",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 27,
       "LQScore": 26,
@@ -1150,6 +1178,7 @@
     {
       "Code": "JS6494",
       "Method": "Best 6",
+      "EXScore": "N/A",
       "UQScore": 36,
       "MedianScore": 35,
       "LQScore": 35,
@@ -1193,6 +1222,7 @@
     {
       "Code": "JS6949",
       "Method": "Best 6",
+      "EXScore": "N/A",
       "UQScore": 37,
       "MedianScore": 36,
       "LQScore": 35,
@@ -1236,6 +1266,7 @@
     {
       "Code": "JS6729",
       "Method": "Best 6",
+      "EXScore": "30",
       "UQScore": 34,
       "MedianScore": 32,
       "LQScore": 30,
@@ -1279,6 +1310,7 @@
     {
       "Code": "JS6901",
       "Method": "Best 5",
+      "EXScore": "22",
       "UQScore": 25,
       "MedianScore": 23,
       "LQScore": 22,
@@ -1322,6 +1354,7 @@
     {
       "Code": "JS6717",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 27,
       "MedianScore": 26,
       "LQScore": 25,
@@ -1365,6 +1398,7 @@
     {
       "Code": "JS6731",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 25,
       "MedianScore": 24,
       "LQScore": 24,
@@ -1408,6 +1442,7 @@
     {
       "Code": "JS6810",
       "Method": "4C2X",
+      "EXScore": "37",
       "UQScore": 37,
       "MedianScore": 35,
       "LQScore": 34,
@@ -1451,6 +1486,7 @@
     {
       "Code": "JS6822",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 26,
       "LQScore": 26,
@@ -1494,6 +1530,7 @@
     {
       "Code": "JS6212",
       "Method": "Best 5",
+      "EXScore": "N/A(New Course)",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -1513,6 +1550,7 @@
     {
       "Code": "JS6224",
       "Method": "Best 6",
+      "EXScore": "N/A(New Course)",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -1532,6 +1570,7 @@
     {
       "Code": "JS6236",
       "Method": "Best 5",
+      "EXScore": "N/A(New Course)",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -1551,6 +1590,7 @@
     {
       "Code": "JS6248",
       "Method": "Best 6",
+      "EXScore": "N/A(New Course)",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -1570,6 +1610,7 @@
     {
       "Code": "JS6250",
       "Method": "Best 5",
+      "EXScore": "",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -1591,6 +1632,7 @@
     {
       "Code": "JS4006",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 24,
       "MedianScore": 23,
       "LQScore": 23,
@@ -1634,6 +1676,7 @@
     {
       "Code": "JS4018",
       "Method": "Best 5",
+      "EXScore": "49",
       "UQScore": 28,
       "MedianScore": 27,
       "LQScore": 26,
@@ -1677,6 +1720,7 @@
     {
       "Code": "JS4020",
       "Method": "Best 5",
+      "EXScore": "23",
       "UQScore": 24,
       "MedianScore": 23,
       "LQScore": 22,
@@ -1720,6 +1764,7 @@
     {
       "Code": "JS4022",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 24,
       "MedianScore": 23,
       "LQScore": 23,
@@ -1763,6 +1808,7 @@
     {
       "Code": "JS4032",
       "Method": "4C2X",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 27,
       "LQScore": 26,
@@ -1806,6 +1852,7 @@
     {
       "Code": "JS4044",
       "Method": "4C2X",
+      "EXScore": "26",
       "UQScore": 31,
       "MedianScore": 28,
       "LQScore": 27,
@@ -1849,6 +1896,7 @@
     {
       "Code": "JS4056",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 26,
       "MedianScore": 25,
       "LQScore": 24,
@@ -1892,6 +1940,7 @@
     {
       "Code": "JS4068",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 25,
       "MedianScore": 24,
       "LQScore": 24,
@@ -1935,6 +1984,7 @@
     {
       "Code": "JS4070",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 26,
       "MedianScore": 24,
       "LQScore": 24,
@@ -1978,6 +2028,7 @@
     {
       "Code": "JS4082",
       "Method": "Best 5",
+      "EXScore": "23",
       "UQScore": 27,
       "MedianScore": 24,
       "LQScore": 22,
@@ -2021,6 +2072,7 @@
     {
       "Code": "JS4094",
       "Method": "Best 5",
+      "EXScore": "23",
       "UQScore": 24,
       "MedianScore": 23,
       "LQScore": 23,
@@ -2064,6 +2116,7 @@
     {
       "Code": "JS4109",
       "Method": "Best 5",
+      "EXScore": "21",
       "UQScore": 22,
       "MedianScore": 22,
       "LQScore": 21,
@@ -2107,6 +2160,7 @@
     {
       "Code": "JS4111",
       "Method": "Best 5",
+      "EXScore": "N/A",
       "UQScore": "N/A",
       "MedianScore": "N/A",
       "LQScore": "N/A",
@@ -2150,6 +2204,7 @@
     {
       "Code": "JS4123",
       "Method": "Best 5",
+      "EXScore": "30",
       "UQScore": 29,
       "MedianScore": 28,
       "LQScore": 27,
@@ -2193,6 +2248,7 @@
     {
       "Code": "JS4202",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 26,
       "MedianScore": 25,
       "LQScore": 24,
@@ -2236,6 +2292,7 @@
     {
       "Code": "JS4214",
       "Method": "4C2X",
+      "EXScore": "45",
       "UQScore": 41,
       "MedianScore": 39,
       "LQScore": 38,
@@ -2279,6 +2336,7 @@
     {
       "Code": "JS4226",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 25,
       "MedianScore": 24,
       "LQScore": 23,
@@ -2322,6 +2380,7 @@
     {
       "Code": "JS4238",
       "Method": "Best 5",
+      "EXScore": "31",
       "UQScore": 30,
       "MedianScore": 28,
       "LQScore": 28,
@@ -2350,6 +2409,7 @@
     {
       "Code": "JS4240",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 26,
       "LQScore": 25,
@@ -2393,6 +2453,7 @@
     {
       "Code": "JS4252",
       "Method": "Best 5",
+      "EXScore": "35",
       "UQScore": 31,
       "MedianScore": 30,
       "LQScore": 30,
@@ -2421,6 +2482,7 @@
     {
       "Code": "JS4254",
       "Method": "4C2X",
+      "EXScore": "34",
       "UQScore": 33,
       "MedianScore": 32,
       "LQScore": 32,
@@ -2464,6 +2526,7 @@
     {
       "Code": "JS4276",
       "Method": "Best 5",
+      "EXScore": "36",
       "UQScore": 34,
       "MedianScore": 32,
       "LQScore": 31,
@@ -2507,6 +2570,7 @@
     {
       "Code": "JS4288",
       "Method": "4C2X",
+      "EXScore": "40",
       "UQScore": 36,
       "MedianScore": 36,
       "LQScore": 35,
@@ -2550,6 +2614,7 @@
     {
       "Code": "JS4329",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 26,
       "MedianScore": 26,
       "LQScore": 25,
@@ -2593,6 +2658,7 @@
     {
       "Code": "JS4331",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 25,
       "LQScore": 25,
@@ -2636,6 +2702,7 @@
     {
       "Code": "JS4343",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 26,
       "MedianScore": 24,
       "LQScore": 23,
@@ -2679,6 +2746,7 @@
     {
       "Code": "JS4361",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 27,
       "MedianScore": 25,
       "LQScore": 24,
@@ -2722,6 +2790,7 @@
     {
       "Code": "JS4372",
       "Method": "Best 5",
+      "EXScore": "N/A(New Course)",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -2741,6 +2810,7 @@
     {
       "Code": "JS4401",
       "Method": "Best 5",
+      "EXScore": "21",
       "UQScore": 22,
       "MedianScore": 21,
       "LQScore": 20,
@@ -2784,6 +2854,7 @@
     {
       "Code": "JS4428",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 26,
       "LQScore": 25,
@@ -2812,6 +2883,7 @@
     {
       "Code": "JS4434",
       "Method": "Best 5",
+      "EXScore": "20",
       "UQScore": 22,
       "MedianScore": 21,
       "LQScore": 20,
@@ -2837,6 +2909,7 @@
     {
       "Code": "JS4460",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 28,
       "MedianScore": 26,
       "LQScore": 25,
@@ -2862,6 +2935,7 @@
     {
       "Code": "JS4462",
       "Method": "Best 5",
+      "EXScore": "21",
       "UQScore": 23,
       "MedianScore": 22,
       "LQScore": 21,
@@ -2887,6 +2961,7 @@
     {
       "Code": "JS4468",
       "Method": "Best 5",
+      "EXScore": "N/A(New Course)",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -2906,6 +2981,7 @@
     {
       "Code": "JS4903",
       "Method": "4C2X",
+      "EXScore": "36",
       "UQScore": 33,
       "MedianScore": 32,
       "LQScore": 32,
@@ -2949,6 +3025,7 @@
     {
       "Code": "JS4264",
       "Method": "4C2X",
+      "EXScore": "36",
       "UQScore": 33,
       "MedianScore": 33,
       "LQScore": 33,
@@ -2977,6 +3054,7 @@
     {
       "Code": "JS4501",
       "Method": "4C2X",
+      "EXScore": "N/A",
       "UQScore": 37,
       "MedianScore": 36,
       "LQScore": 35,
@@ -3020,6 +3098,7 @@
     {
       "Code": "JS4502",
       "Method": "4C2X",
+      "EXScore": "N/A",
       "UQScore": 41,
       "MedianScore": 40,
       "LQScore": 39,
@@ -3057,6 +3136,7 @@
     {
       "Code": "JS4513",
       "Method": "4C2X",
+      "EXScore": "31",
       "UQScore": 31,
       "MedianScore": 29,
       "LQScore": 29,
@@ -3100,6 +3180,7 @@
     {
       "Code": "JS4525",
       "Method": "4C2X",
+      "EXScore": "36",
       "UQScore": 34,
       "MedianScore": 33,
       "LQScore": 32,
@@ -3143,6 +3224,7 @@
     {
       "Code": "JS4537",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 25,
       "LQScore": 24,
@@ -3186,6 +3268,7 @@
     {
       "Code": "JS4542",
       "Method": "4C2X",
+      "EXScore": "36",
       "UQScore": 34,
       "MedianScore": 32,
       "LQScore": 32,
@@ -3223,6 +3306,7 @@
     {
       "Code": "JS4550",
       "Method": "4C2X",
+      "EXScore": "38",
       "UQScore": 35,
       "MedianScore": 34,
       "LQScore": 33,
@@ -3254,6 +3338,7 @@
     {
       "Code": "JS4601",
       "Method": "Best 5",
+      "EXScore": "23",
       "UQScore": 24,
       "MedianScore": 23,
       "LQScore": 22,
@@ -3297,6 +3382,7 @@
     {
       "Code": "JS4633",
       "Method": "Best 5",
+      "EXScore": "29",
       "UQScore": 27,
       "MedianScore": 27,
       "LQScore": 26,
@@ -3328,6 +3414,7 @@
     {
       "Code": "JS4682",
       "Method": "Best 5",
+      "EXScore": "33",
       "UQScore": 32,
       "MedianScore": 30,
       "LQScore": 29,
@@ -3371,6 +3458,7 @@
     {
       "Code": "JS4690",
       "Method": "Best 5",
+      "EXScore": "33",
       "UQScore": 32,
       "MedianScore": 31,
       "LQScore": 29,
@@ -3405,6 +3493,7 @@
     {
       "Code": "JS4719",
       "Method": "Best 5",
+      "EXScore": "29",
       "UQScore": 28,
       "MedianScore": 27,
       "LQScore": 26,
@@ -3448,6 +3537,7 @@
     {
       "Code": "JS4801",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 26,
       "LQScore": 25,
@@ -3491,6 +3581,7 @@
     {
       "Code": "JS4812",
       "Method": "Best 5",
+      "EXScore": "29",
       "UQScore": 30,
       "MedianScore": 28,
       "LQScore": 27,
@@ -3534,6 +3625,7 @@
     {
       "Code": "JS4824",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 25,
       "MedianScore": 24,
       "LQScore": 23,
@@ -3577,6 +3669,7 @@
     {
       "Code": "JS4836",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 26,
       "MedianScore": 25,
       "LQScore": 24,
@@ -3620,6 +3713,7 @@
     {
       "Code": "JS4838",
       "Method": "Best 5",
+      "EXScore": "26",
       "UQScore": 27,
       "MedianScore": 26,
       "LQScore": 24,
@@ -3663,6 +3757,7 @@
     {
       "Code": "JS4848",
       "Method": "4C2X",
+      "EXScore": "30",
       "UQScore": 31,
       "MedianScore": 29,
       "LQScore": 28,
@@ -3706,6 +3801,7 @@
     {
       "Code": "JS4850",
       "Method": "Best 5",
+      "EXScore": "32",
       "UQScore": 29,
       "MedianScore": 28,
       "LQScore": 27,
@@ -3749,6 +3845,7 @@
     {
       "Code": "JS4858",
       "Method": "Best 5",
+      "EXScore": "30",
       "UQScore": 30,
       "MedianScore": 28,
       "LQScore": 27,
@@ -3777,6 +3874,7 @@
     {
       "Code": "JS4862",
       "Method": "Best 5",
+      "EXScore": "30",
       "UQScore": 29,
       "MedianScore": 27,
       "LQScore": 27,
@@ -3820,6 +3918,7 @@
     {
       "Code": "JS4874",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 28,
       "MedianScore": 26,
       "LQScore": 25,
@@ -3863,6 +3962,7 @@
     {
       "Code": "JS4886",
       "Method": "Best 5",
+      "EXScore": "24",
       "UQScore": 24,
       "MedianScore": 24,
       "LQScore": 23,
@@ -3906,6 +4006,7 @@
     {
       "Code": "JS4892",
       "Method": "Best 5",
+      "EXScore": "27",
       "UQScore": 27,
       "MedianScore": 26,
       "LQScore": 26,
@@ -3937,6 +4038,7 @@
     {
       "Code": "JS4893",
       "Method": "Best 5",
+      "EXScore": "N/A(New Course)",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -3958,6 +4060,7 @@
     {
       "Code": "JS5100",
       "Method": "UST A",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 23.5,
       "LQScore": 23,
@@ -4002,6 +4105,7 @@
     {
       "Code": "JS5101",
       "Method": "UST A",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 38,
       "LQScore": 36,
@@ -4042,6 +4146,7 @@
     {
       "Code": "JS5200",
       "Method": "UST B",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 38,
       "LQScore": 36,
@@ -4085,6 +4190,7 @@
     {
       "Code": "JS5211",
       "Method": "UST B",
+      "EXScore": "",
       "UQScore": "N/A(New Course)",
       "MedianScore": "N/A(New Course)",
       "LQScore": "N/A(New Course)",
@@ -4104,6 +4210,7 @@
     {
       "Code": "JS5300",
       "Method": "UST C",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 36,
       "LQScore": 35,
@@ -4147,6 +4254,7 @@
     {
       "Code": "JS5312",
       "Method": "UST D",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 44,
       "LQScore": 43,
@@ -4178,6 +4286,7 @@
     {
       "Code": "JS5313",
       "Method": "UST C",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 49,
       "LQScore": 48,
@@ -4218,6 +4327,7 @@
     {
       "Code": "JS5314",
       "Method": "UST C",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 38,
       "LQScore": 36,
@@ -4249,6 +4359,7 @@
     {
       "Code": "JS5315",
       "Method": "UST C",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 36,
       "LQScore": 35,
@@ -4280,6 +4391,7 @@
     {
       "Code": "JS5316",
       "Method": "UST C",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 37,
       "LQScore": 36,
@@ -4311,6 +4423,7 @@
     {
       "Code": "JS5318",
       "Method": "UST C",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 38,
       "LQScore": 37,
@@ -4342,6 +4455,7 @@
     {
       "Code": "JS5331",
       "Method": "UST D",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 46,
       "LQScore": 45,
@@ -4373,6 +4487,7 @@
     {
       "Code": "JS5332",
       "Method": "UST D",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 52.5,
       "LQScore": 51,
@@ -4404,6 +4519,7 @@
     {
       "Code": "JS5411",
       "Method": "UST E",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 32,
       "LQScore": 31,
@@ -4447,6 +4563,7 @@
     {
       "Code": "JS5412",
       "Method": "UST F",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 35.5,
       "LQScore": 34.5,
@@ -4475,6 +4592,7 @@
     {
       "Code": "JS5811",
       "Method": "UST G",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 43,
       "LQScore": 41.5,
@@ -4506,6 +4624,7 @@
     {
       "Code": "JS5812",
       "Method": "UST C",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 40,
       "LQScore": 37,
@@ -4537,6 +4656,7 @@
     {
       "Code": "JS5813",
       "Method": "UST H",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 47,
       "LQScore": 47,
@@ -4568,6 +4688,7 @@
     {
       "Code": "JS5814",
       "Method": "UST F",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 44,
       "LQScore": 42.5,
@@ -4599,6 +4720,7 @@
     {
       "Code": "JS5901",
       "Method": "UST I",
+      "EXScore": "",
       "UQScore": "",
       "MedianScore": 57.5,
       "LQScore": 56,

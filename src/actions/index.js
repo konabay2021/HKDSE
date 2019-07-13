@@ -43,3 +43,13 @@ export function modalState(state) {
         payload: payload
     };
 }
+
+// export function AdjustedScore(state) {
+//     const payload = {
+//         state: state
+//     }
+//     return {
+//         type: Adjusted_STATE,
+//         payload: payload
+//     };
+// }

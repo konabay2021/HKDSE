@@ -20,7 +20,7 @@ const listTemplate = (props) => {
                         return (
                             <li key={e} className="leftListItem">
                                 <Link className="link" to={{
-                                    pathname: `/${page}/${e}`,
+                                    pathname: `${process.env.PUBLIC_URL}/${page}/${e}`,
                                 }}
                                 ><p>{e}</p></Link>
                             </li>
@@ -33,11 +33,11 @@ const listTemplate = (props) => {
 
     const showRightList = (page) => {
         let list = [];
-
+        let urlPara = props.match.url.split("/")
         if (page === "tutorial")
-            list = allPlayList[props.match.url.split("/")[2]]
+            list = allPlayList[urlPara[urlPara.length-1]]
         else
-            list = usefulLinks[props.match.url.split("/")[2]]
+            list = usefulLinks[urlPara[urlPara.length-1]]
         return (
             <React.Fragment>
                 <ul className="rightList">
@@ -52,7 +52,7 @@ const listTemplate = (props) => {
                                         //     subject: props.match.url.split("/")[2],
                                         //     id: e.id
                                         // }
-                                    }} ><p>{e.name}</p></Link> : <a className="link" href={`${e.url}`} target="_blank"><p>{e.name}</p></a>}
+                                    }} ><p>{e.name}</p></Link> : <a className="link" href={e.url} target="_blank"><p>{e.name}</p></a>}
                             </li>
                         )
                     })}
@@ -63,17 +63,17 @@ const listTemplate = (props) => {
 
 
 
-
+    console.log(process.env.PUBLIC_URL)
 
     return (
         <div className="listContainer">
             <div className="leftListContainer">
-                {(props.match.path === "/resources" || props.match.path === "/resources/:topicId") && showLeftList("resources")}
-                {(props.match.path === "/tutorial" || props.match.path === "/tutorial/:topicId") && showLeftList("tutorial")}
+                {(props.match.path === `${process.env.PUBLIC_URL}/resources` || props.match.path === `${process.env.PUBLIC_URL}/resources/:topicId`) && showLeftList("resources")}
+                {(props.match.path === `${process.env.PUBLIC_URL}/tutorial` || props.match.path === `${process.env.PUBLIC_URL}/tutorial/:topicId`) && showLeftList("tutorial")}
             </div>
             <div className="rightListContainer">
-                {props.match.path === "/resources/:topicId" && showRightList("resources")}
-                {props.match.path === "/tutorial/:topicId" && showRightList("tutorial")}
+                {props.match.path === `${process.env.PUBLIC_URL}/resources/:topicId` && showRightList("resources")}
+                {props.match.path === `${process.env.PUBLIC_URL}/tutorial/:topicId` && showRightList("tutorial")}
             </div>
         </div>
 

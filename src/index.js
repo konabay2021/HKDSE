@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { BrowserRouter, Route, Switch, } from "react-router-dom";
-import {TransitionGroup, CSSTransition } from 'react-transition-group'
+import { BrowserRouter, Route } from "react-router-dom";
 import reducers from "./reducers";
 import { AnimatedSwitch } from 'react-router-transition';
 
@@ -14,14 +13,8 @@ import NavBar from "./components/NavBar";
 import Tutorial from "./containers/Tutorial"
 import Resources from "./components/Resources"
 
-
 import './style/style.scss'
 import * as serviceWorker from "./serviceWorker"
-const routes = [
-    { path: '/result', name: 'Result', Component: Result },
-    { path: '/', name: 'Home', Component: Home },
-
-]
 
 const Workaround = ({ action, children }) =>
     action === 'REPLACE' ? null : children
@@ -30,8 +23,6 @@ ReactDOM.render(
     <Provider store={createStore(reducers)}>
 
         <BrowserRouter >
-            {/* <div>Header</div>
-                by Ray */}
             <React.Fragment>
                 <NavBar />
                  <AnimatedSwitch
@@ -40,10 +31,6 @@ ReactDOM.render(
                     atActive={{ opacity: 1 }}
                     className="switch-wrapper44 index-container" 
                 >
-
-
-                    {/* <Route path="/HKDSE/result" component={Result} />
-                <Route path="/HKDSE" component={Home} /> */}
                     <Route path={`${process.env.PUBLIC_URL}/result`} component={Result} />
                     <Route path={`${process.env.PUBLIC_URL}/input`} component={InputPage} />
                     <Route path={`${process.env.PUBLIC_URL}/tutorial/:topicId/:topicId`}  component={Tutorial} />
@@ -56,25 +43,6 @@ ReactDOM.render(
                 </AnimatedSwitch>
 
             </React.Fragment>
-            {/*                     
-                    {routes.map(({ path, Component }) => (
-                        <Route key={path} exact  path={path}
-                        >
-                            {({ match }) => (
-                                <CSSTransition
-                                    in={match != null}
-                                    timeout={300}
-                                    classNames="page"
-                                    unmountOnExit
-                                >
-                                    <div className="page">
-                                        <Component  />
-                                    </div>
-                                </CSSTransition>
-                            )}
-                        </Route>
-                    ))} */}
-
         </BrowserRouter>
     </Provider>,
     document.getElementById('root'));

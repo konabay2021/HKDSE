@@ -2,7 +2,7 @@
   "name": "hkdse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://justinsochi.github.io/HKDSE",
+  "homepage": "https://justinsochi.github.io",
   "dependencies": {
     "apexcharts": "^2.5.0",
     "axios": "^0.18.0",
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && sw-precache-cra --config sw-config.js --no-minify",
+    "build": "react-scripts build && sw-precache-cra --config sw-config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-sw": "http-server ./build",

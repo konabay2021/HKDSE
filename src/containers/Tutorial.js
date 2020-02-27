@@ -24,7 +24,7 @@ class Tutorial extends Component {
             method: 'GET',
             mode: 'cors',
         };
-        const api_key = "AIzaSyDc6G5fckjYrNcgRbW5uUZKn4RtFiJbLOw";
+        const api_key = "AIzaSyAI9f6FM-l6N8HQhpNliHst-jU2fKeTEUU";
         const base_url = 'https://www.googleapis.com/youtube/v3';
         let url = `${base_url}/playlistItems?&part=snippet&playlistId=${id.id}&maxResults=30&key=${api_key}`;
         const result = await fetch(url, config);

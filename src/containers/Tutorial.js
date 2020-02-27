@@ -36,7 +36,7 @@ class Tutorial extends Component {
 
     showPlayList = () => {
         let { playlist } = this.state
-        console.log(playlist)
+        // console.log(playlist)
         if (playlist)
             return (
                 <ul className="playlistContainer">
@@ -83,7 +83,7 @@ class Tutorial extends Component {
         // next page: add  "&pageToken=" +nextPageToken
     }
     render() {
-        console.log(process.env.PUBLIC_URL, this.props.match.path)
+        // console.log(process.env.PUBLIC_URL, this.props.match.path)
         let {
             playlist,
         } = this.state

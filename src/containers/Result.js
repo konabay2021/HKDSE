@@ -62,7 +62,9 @@ class Result extends Component {
                 });
         }
         if (this.state.render !== prevState.render || this.state.edit !== prevState.edit) {
-             this.setState({callScore:this.scoreAdjustment()})
+             this.setState({callScore:this.scoreAdjustment()}, ()=> {
+                //  console.log(this.scoreAdjustment())
+             })
           }
     }
 
@@ -71,7 +73,7 @@ class Result extends Component {
         this.state.callScore.map((data, index) => {
             return data.score = parseInt(event.target[index].value, 10)
         })
-        this.props.calScore(this.state.callScore)
+        // this.props.calScore(this.state.callScore)
         event.preventDefault();
         this.setState({ edit: !this.state.edit });
     }
@@ -128,12 +130,13 @@ class Result extends Component {
     //Load a table for the user to edit their inputted score when the button "edit" is clicked
     loadEditScore = () => {
         let name = ["chiScore", "engScore", "mathScore", "lsScore", "el1Score", "el2Score", "el3Score"]
+        let score = this.scoreAdjustment(true)
         return this.state.callScore.map((data, index) => {
             return (
                 <tr className="scoreTableTr" key={data.subject}>
                     <td ><h6>{data.subject}</h6></td>
                     <td>
-                        <select className="form-control" name={name[index]} defaultValue={this.scoreAdjustment(true)[index].score}>
+                        <select className="form-control" name={name[index]} defaultValue={score[index].score}>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -283,6 +286,8 @@ class Result extends Component {
                 }
               
             })
+            if(!edit)
+                this.props.calScore(score)
         }
         
         return score

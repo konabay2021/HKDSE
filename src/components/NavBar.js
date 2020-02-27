@@ -29,8 +29,8 @@ const NavBar = () => {
                     <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/tutorial`} className="link">Tutorial</Link>
                     <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/input`} className="link">Input</Link>
                     <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/resources`} className="link">Resources</Link>
-                    <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/qa`} className="link" >QA</Link>
-                    <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/contact`} className="link">Contact Us</Link>
+                    {/* <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/qa`} className="link" >QA</Link>
+                    <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/contact`} className="link">Contact Us</Link> */}
                 </div>
             </nav>
         )

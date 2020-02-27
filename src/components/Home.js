@@ -40,25 +40,45 @@ const Home = () => {
                             <div className="imgContainer">
                                 <img src="https://i.imgur.com/kOeI9ZQ.jpg" alt="HKDSE Score Calculator" ></img>
                                 <div className="imgTextContainer">
-                                    <span>HKDSE</span>
+                                    <span>HKDSE Calculator: List all course available</span>
+                                </div>
+                            </div>
+                            <div className="imgContainer">
+                                <img src="https://i.imgur.com/r2nttnx.png" alt="HKDSE Score Calculator" ></img>
+                                <div className="imgTextContainer">
+                                    <span>HKDSE Calculator: Grade Point Distrubtion </span>
+                                </div>
+                            </div>
+                            <div className="imgContainer">
+                                <img src="https://i.imgur.com/tFOmO5m.png" alt="HKDSE Score Calculator" ></img>
+                                <div className="imgTextContainer">
+                                    <span>HKDSE Calculator: Applcation Statistics</span>
+                                </div>
+                            </div>
+                            
+
+                            <p>2. HKDSE Tutorial</p>
+                            <p>Mainly covers DSE Mathematics, suitable for all level of students</p>
+                            <div className="imgContainer">
+                                <img src="https://i.imgur.com/kORAaDY.png" alt="HKDSE Score Calculator" ></img>
+                                <div className="imgTextContainer">
+                                    <span>HKDSE Tutorial</span>
+                                </div>
+                            </div>
+                            <div className="imgContainer">
+                                <img src="https://i.imgur.com/TfxOZqP.png" alt="HKDSE Score Calculator" ></img>
+                                <div className="imgTextContainer">
+                                    <span>HKDSE Tutorial</span>
                                 </div>
                             </div>
 
-                            <p>2. HKDSE tutorial</p>
-                            <p>Mainly covers DSE Mathematics, suitable for all level of students</p>
-                            <div className="imgContainer">
-                                <img src="https://i.imgur.com/kOeI9ZQ.jpg" alt="HKDSE Score Calculator" ></img>
-                                <div className="imgTextContainer">
-                                    <span>HKDSE</span>
-                                </div>
-                            </div>
 
                             <p>3. Learning materials</p>
                             <p>Include study notes, subject cut-off score reference, HKEAA official documents, and experience sharing </p>
                             <div className="imgContainer">
-                                <img src="https://i.imgur.com/kOeI9ZQ.jpg" alt="HKDSE Score Calculator" ></img>
+                                <img src="https://i.imgur.com/UMC3Nxi.png" alt="HKDSE Score Calculator" ></img>
                                 <div className="imgTextContainer">
-                                    <span>HKDSE</span>
+                                    <span>HKDSE Learning materials</span>
                                 </div>
                             </div>
 

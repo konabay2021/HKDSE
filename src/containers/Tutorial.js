@@ -24,7 +24,7 @@ class Tutorial extends Component {
             method: 'GET',
             mode: 'cors',
         };
-        const api_key = "AIzaSyAI9f6FM-l6N8HQhpNliHst-jU2fKeTEUU";
+        const api_key = "AIzaSyAw_yqlGyDEgYxr1Iwy1nrXxoMGWnbyU48";
         const base_url = 'https://www.googleapis.com/youtube/v3';
         let url = `${base_url}/playlistItems?&part=snippet&playlistId=${id.id}&maxResults=30&key=${api_key}`;
         const result = await fetch(url, config);
@@ -36,6 +36,7 @@ class Tutorial extends Component {
 
     showPlayList = () => {
         let { playlist } = this.state
+        console.log(playlist)
         if (playlist)
             return (
                 <ul className="playlistContainer">

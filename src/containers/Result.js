@@ -62,7 +62,7 @@ class Result extends Component {
                 });
         }
         if (this.state.render !== prevState.render || this.state.edit !== prevState.edit) {
-            this.setState({callScore:this.scoreAdjustment()})
+             this.setState({callScore:this.scoreAdjustment()})
           }
     }
 
@@ -261,6 +261,7 @@ class Result extends Component {
                     break
                 }
             })
+            this.props.calScore(score)
         }
         else{
             score.map(e => {
@@ -283,7 +284,7 @@ class Result extends Component {
               
             })
         }
-        this.props.calScore(score)
+        
         return score
 
     }

@@ -12,17 +12,13 @@ https://justinsochi.github.io/HKDSE/
 
 ### Install Node JS
 
-### Install create-react-app
-
-```bash
-npm install -g create-react-app
-```
 
 ## Cloning and Running the Application in local
 
 Install all the npm packages. Go into the project folder and type the following command to install all npm packages
 
 ```bash
+cd fonrtend
 npm install
 ```
 

@@ -32,14 +32,12 @@ class Tutorial extends Component {
         if(playlist.error){
             alert("Youtube API Error Occurs, We apologize for any inconvenience")
             window.location.href = "https://justinsochi.github.io/HKDSE/tutorial";
-
         }
         else{
             this.setState({ playlist })
             this.setState({ id: playlist.items[0].snippet.resourceId.videoId, des: playlist.items[0].snippet.description })
             this.showPlayList()
         }
-        
     }
 
     showPlayList = () => {

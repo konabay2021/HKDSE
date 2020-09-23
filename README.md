@@ -18,7 +18,6 @@ https://justinsochi.github.io/HKDSE/
 Install all the npm packages. Go into the project folder and type the following command to install all npm packages
 
 ```bash
-cd fonrtend
 npm install
 ```
 

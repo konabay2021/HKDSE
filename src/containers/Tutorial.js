@@ -24,20 +24,28 @@ class Tutorial extends Component {
             method: 'GET',
             mode: 'cors',
         };
-        const api_key = "AIzaSyAw_yqlGyDEgYxr1Iwy1nrXxoMGWnbyU48";
+        const api_key = "AIzaSyBJiFFbmMqPXMBkDu1Y2yR_1dHBx2avnhk";
         const base_url = 'https://www.googleapis.com/youtube/v3';
         let url = `${base_url}/playlistItems?&part=snippet&playlistId=${id.id}&maxResults=30&key=${api_key}`;
         const result = await fetch(url, config);
         const playlist = await result.json();
-        this.setState({ playlist })
-        this.setState({ id: playlist.items[0].snippet.resourceId.videoId, des: playlist.items[0].snippet.description })
-        this.showPlayList()
+        if(playlist.error){
+            alert("Youtube API Error Occurs, We apologize for any inconvenience")
+            window.location.href = "https://justinsochi.github.io/HKDSE/tutorial";
+
+        }
+        else{
+            this.setState({ playlist })
+            this.setState({ id: playlist.items[0].snippet.resourceId.videoId, des: playlist.items[0].snippet.description })
+            this.showPlayList()
+        }
+        
     }
 
     showPlayList = () => {
         let { playlist } = this.state
         // console.log(playlist)
-        if (playlist)
+        if (playlist && playlist.items)
             return (
                 <ul className="playlistContainer">
                     {playlist.items.map(e => {

@@ -6,7 +6,7 @@
 
 ## Live Application URL
 
-https://justinsochi.github.io/HKDSE/
+https://case2018.github.io/HKDSE/
 
 ## Prerequisites
 

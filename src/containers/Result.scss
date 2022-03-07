@@ -1,0 +1,119 @@
+::-webkit-scrollbar:horizontal {
+  background: white !important;
+}
+.resultContainer {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  background: #333;
+  color: rgb(223, 223, 223);
+  .dataAnalysis {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    .chart {
+      margin: 0 2.5%;
+      .notice {
+        p{
+          font-size: 1.2em;
+          margin: 5px 25px;
+          &:first-child {
+            padding-top: 25px;
+          }
+          &:last-child {
+            padding-bottom: 25px;
+          }
+        }
+      }
+      .chartIntro h5 {
+        padding-top: 15px;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      .description {
+        font-size: 1.2em;
+        h5 {
+          padding-top: 15px;
+          text-align: center;
+        }
+        p {
+          margin: 0 25px;
+          &:first-child {
+            padding-top: 25px;
+          }
+          &:last-child {
+            padding-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+  .scoreTable {
+    .tableTitle {
+      text-align: center;
+      padding: 5px 0;
+    }
+    .schoolButton {
+      width: 47%;
+      margin: 1.5%;
+    }
+
+    .changeButton,
+    .showButton {
+      width: 97%;
+      margin: 1.5% 1.5%;
+    }
+  }
+  .cellOnClick {
+    cursor: pointer;
+    &:hover {
+      background-color: #d6d6d6;
+    }
+  }
+  table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    .scoreTableTr {
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
+    }
+    td,
+    th {
+      vertical-align: middle !important;
+      text-align: center !important;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      // width: 12%;
+      word-break: break-word;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .resultContainer {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .gridContainer {
+      display: grid;
+      grid-template-columns: 20% 1.5% 78.5%;
+      .scoreTable {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 90px;
+        padding-bottom: 1%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-left: 5%;
+        .showButton {
+          display: none;
+        }
+      }
+      .loading {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+    }
+  }
+}
+

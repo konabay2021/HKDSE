@@ -1,0 +1,26 @@
+.footer {
+  padding: 50px 0px;
+  color: rgb(223, 223, 223);
+  background: #404040;
+  .footerContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: rgb(223, 223, 223);
+    }
+    a:hover {
+      color: rgb(255, 255, 255);
+    }
+    p {
+      line-height: 25px;
+      img {
+        padding-left: 5px;
+        height: 20px;
+        vertical-align: top;
+      }
+    }
+  }
+}

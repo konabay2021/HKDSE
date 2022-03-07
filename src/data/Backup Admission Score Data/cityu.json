@@ -1,0 +1,1355 @@
+{
+  "CITYU": [
+    {
+      "Code": "JS1000",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 27,
+      "LQScore": 26,
+      "LowestScore": "",
+      "Course": "BSc Computational Finance and Financial Technology",
+      "MinLevelRequired": 334233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "",
+      "Remarks": "",
+      "intake": [
+        11,
+        8,
+        7
+      ],
+      "OutBandAIntake": [
+        0,
+        1,
+        1
+      ],
+      "ApplyAmount": [
+        1496,
+        1230,
+        1140
+      ],
+      "BandAApplyAmount": [
+        142,
+        121,
+        85
+      ]
+    },
+    {
+      "Code": "JS1001",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 27,
+      "LQScore": 26,
+      "LowestScore": "",
+      "Course": "BBA Global Business",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "",
+      "Remarks": "",
+      "intake": [
+        11,
+        13,
+        13
+      ],
+      "OutBandAIntake": [
+        3,
+        2,
+        1
+      ],
+      "ApplyAmount": [
+        2829,
+        2509,
+        2401
+      ],
+      "BandAApplyAmount": [
+        239,
+        210,
+        177
+      ]
+    },
+    {
+      "Code": "JS1002",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 25,
+      "LQScore": 24,
+      "LowestScore": "",
+      "Course": "BBA Accountancy",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "",
+      "Remarks": "",
+      "intake": [
+        123,
+        116,
+        117
+      ],
+      "OutBandAIntake": [
+        3,
+        4,
+        13
+      ],
+      "ApplyAmount": [
+        5363,
+        4582,
+        3810
+      ],
+      "BandAApplyAmount": [
+        1164,
+        952,
+        773
+      ]
+    },
+    {
+      "Code": "JS1003",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 31,
+      "LQScore": 30.5,
+      "LowestScore": "",
+      "Course": "Department of Economics and Finance",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language; X1.5: Mathematics(Core)",
+      "Remarks": "",
+      "intake": [
+        143,
+        140,
+        138
+      ],
+      "OutBandAIntake": [
+        3,
+        5,
+        5
+      ],
+      "ApplyAmount": [
+        6180,
+        4795,
+        4461
+      ],
+      "BandAApplyAmount": [
+        1013,
+        770,
+        911
+      ]
+    },
+    {
+      "Code": "JS1004",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 24,
+      "LQScore": 24,
+      "LowestScore": "",
+      "Course": "Department of Information Systems",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "",
+      "Remarks": "",
+      "intake": [
+        85,
+        84,
+        77
+      ],
+      "OutBandAIntake": [
+        8,
+        1,
+        5
+      ],
+      "ApplyAmount": [
+        2947,
+        3098,
+        3374
+      ],
+      "BandAApplyAmount": [
+        545,
+        769,
+        617
+      ]
+    },
+    {
+      "Code": "JS1005",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 25,
+      "LQScore": 24,
+      "LowestScore": "",
+      "Course": "BBA Management",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "",
+      "Remarks": "",
+      "intake": [
+        61,
+        60,
+        59
+      ],
+      "OutBandAIntake": [
+        3,
+        3,
+        4
+      ],
+      "ApplyAmount": [
+        7003,
+        6525,
+        5667
+      ],
+      "BandAApplyAmount": [
+        727,
+        724,
+        587
+      ]
+    },
+    {
+      "Code": "JS1006",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 30,
+      "LQScore": 30,
+      "LowestScore": "",
+      "Course": "Department of Management Sciences",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language; X1.5: Mathematics(Core)",
+      "Remarks": "",
+      "intake": [
+        69,
+        72,
+        68
+      ],
+      "OutBandAIntake": [
+        10,
+        1,
+        3
+      ],
+      "ApplyAmount": [
+        3524,
+        3375,
+        2876
+      ],
+      "BandAApplyAmount": [
+        399,
+        553,
+        402
+      ]
+    },
+    {
+      "Code": "JS1007",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 27,
+      "LQScore": 27,
+      "LowestScore": "",
+      "Course": "BBA Marketing",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X1.5: English Language",
+      "Remarks": "",
+      "intake": [
+        68,
+        69,
+        67
+      ],
+      "OutBandAIntake": [
+        2,
+        2,
+        4
+      ],
+      "ApplyAmount": [
+        7062,
+        6345,
+        7306
+      ],
+      "BandAApplyAmount": [
+        939,
+        950,
+        1403
+      ]
+    },
+    {
+      "Code": "JS1041",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 30,
+      "LQScore": 29,
+      "LowestScore": "",
+      "Course": "School of Creative Media",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language",
+      "Remarks": "",
+      "intake": [
+        116,
+        102,
+        101,
+        106,
+        98,
+        96,
+        28
+      ],
+      "OutBandAIntake": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ApplyAmount": [
+        12284,
+        13135,
+        11196,
+        7193,
+        5945,
+        5183
+      ],
+      "BandAApplyAmount": [
+        1654,
+        2753,
+        2460,
+        2582,
+        1579,
+        1359,
+        1064
+      ]
+    },
+    {
+      "Code": "JS1042",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 29,
+      "LQScore": 29,
+      "LowestScore": "",
+      "Course": "BA Creative Media",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language",
+      "Remarks": "",
+      "intake": [
+        22
+      ],
+      "OutBandAIntake": [
+        0
+      ],
+      "ApplyAmount": [
+        3678
+      ],
+      "BandAApplyAmount": [
+        592
+      ]
+    },
+    {
+      "Code": "JS1043",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 28,
+      "LQScore": 28,
+      "LowestScore": "",
+      "Course": "BSc Creative Media",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language; X1.5: Mathematics(Core)",
+      "Remarks": "",
+      "intake": [
+        29
+      ],
+      "OutBandAIntake": [
+        0
+      ],
+      "ApplyAmount": [
+        2724
+      ],
+      "BandAApplyAmount": [
+        370
+      ]
+    },
+    {
+      "Code": "JS1044",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 26,
+      "LQScore": 26,
+      "LowestScore": "",
+      "Course": "BAS New Media",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language",
+      "Remarks": "",
+      "intake": [
+        16
+      ],
+      "OutBandAIntake": [
+        0
+      ],
+      "ApplyAmount": [
+        1513
+      ],
+      "BandAApplyAmount": [
+        149
+      ]
+    },
+    {
+      "Code": "JS1051",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 38.5,
+      "LQScore": 38,
+      "LowestScore": "",
+      "Course": "School of Energy and Environment",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Chemistry Combined Science (Chemistry and Physics) Physics",
+      "ReqSub":"Physics//Chemistry//Combined Science (Physics + Chemistry)",
+      "Weighting": "X2.5: Mathematics(Core), Chemistry, Combined Science (Chemistry and Physics), Physics; X2: English Language",
+      "Remarks": "",
+      "intake": [
+        76,
+        49,
+        43,
+        43,
+        40,
+        58,
+        61
+      ],
+      "OutBandAIntake": [
+        23,
+        9,
+        7,
+        10,
+        15,
+        13,
+        7
+      ],
+      "ApplyAmount": [
+        10573,
+        8994,
+        6148,
+        5608,
+        3368,
+        3013,
+        2631
+      ],
+      "BandAApplyAmount": [
+        965,
+        959,
+        547,
+        585,
+        311,
+        431,
+        388
+      ]
+    },
+    {
+      "Code": "JS1061",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 29,
+      "LQScore": 28,
+      "LowestScore": "",
+      "Course": "Bachelor of Laws",
+      "MinLevelRequired": 352233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "",
+      "Remarks": "",
+      "intake": [
+        32,
+        34,
+        37,
+        32,
+        47,
+        47,
+        51
+      ],
+      "OutBandAIntake": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "ApplyAmount": [
+        1518,
+        1490,
+        1550,
+        1320,
+        1040,
+        955,
+        1020
+      ],
+      "BandAApplyAmount": [
+        221,
+        175,
+        167,
+        125,
+        123,
+        127,
+        149
+      ]
+    },
+    {
+      "Code": "JS1071",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": "N/A(New Program)",
+      "LQScore": "N/A(New Program)",
+      "LowestScore": "",
+      "Course": "School of Data Science",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language, Mathematics(Core)",
+      "Remarks": "",
+      "intake": "N/A(New Program)",
+      "OutBandAIntake": "N/A(New Program)",
+      "ApplyAmount": "N/A(New Program)",
+      "BandAApplyAmount": "N/A(New Program)"
+    },
+    {
+      "Code": "JS1072",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": "N/A(New Program)",
+      "LQScore": "N/A(New Program)",
+      "LowestScore": "",
+      "Course": "BSc Data Science",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language, Mathematics(Core)",
+      "Remarks": "",
+      "intake": "N/A(New Program)",
+      "OutBandAIntake": "N/A(New Program)",
+      "ApplyAmount": "N/A(New Program)",
+      "BandAApplyAmount": "N/A(New Program)"
+    },
+    {
+      "Code": "JS1073",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": "N/A(New Program)",
+      "LQScore": "N/A(New Program)",
+      "LowestScore": "",
+      "Course": "BEng Data and Systems Analytics",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language, Mathematics(Core)",
+      "Remarks": "",
+      "intake": "N/A(New Program)",
+      "OutBandAIntake": "N/A(New Program)",
+      "ApplyAmount": "N/A(New Program)",
+      "BandAApplyAmount": "N/A(New Program)"
+    },
+    {
+      "Code": "JS1101",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 30,
+      "LQScore": 29,
+      "LowestScore": "",
+      "Course": "Department of Social and Behavioural Sciences",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language",
+      "Remarks": "",
+      "intake": [
+        104,
+        107,
+        110
+      ],
+      "OutBandAIntake": [
+        2,
+        1,
+        6
+      ],
+      "ApplyAmount": [
+        10545,
+        10265,
+        8845
+      ],
+      "BandAApplyAmount": [
+        1651,
+        1717,
+        1242
+      ]
+    },
+    {
+      "Code": "JS1102",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 30,
+      "LQScore": 30,
+      "LowestScore": "",
+      "Course": "BSocSc Asian and International Studies",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language; X1.5: Liberal Studies",
+      "Remarks": "",
+      "intake": [
+        16,
+        16,
+        15
+      ],
+      "OutBandAIntake": [
+        1,
+        0,
+        4
+      ],
+      "ApplyAmount": [
+        2489,
+        2679,
+        2120
+      ],
+      "BandAApplyAmount": [
+        317,
+        191,
+        139
+      ]
+    },
+    {
+      "Code": "JS1103",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 31,
+      "LQScore": 30,
+      "LowestScore": "",
+      "Course": "BA Chinese and History",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X1.5: English Language, Chinese History, Chinese Literature, History, Visual Arts",
+      "Remarks": "",
+      "intake": [
+        41,
+        44,
+        43
+      ],
+      "OutBandAIntake": [
+        5,
+        3,
+        9
+      ],
+      "ApplyAmount": [
+        4071,
+        3693,
+        3045
+      ],
+      "BandAApplyAmount": [
+        958,
+        567,
+        454
+      ]
+    },
+    {
+      "Code": "JS1104",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 35,
+      "LQScore": 34.5,
+      "LowestScore": "",
+      "Course": "BA English",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2.5: English Language; X1.5: Liberal Studies, Literature in English",
+      "Remarks": "",
+      "intake": [
+        26,
+        25,
+        21
+      ],
+      "OutBandAIntake": [
+        3,
+        3,
+        0
+      ],
+      "ApplyAmount": [
+        2710,
+        2286,
+        2082
+      ],
+      "BandAApplyAmount": [
+        406,
+        249,
+        277
+      ]
+    },
+    {
+      "Code": "JS1105",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 32,
+      "LQScore": 31,
+      "LowestScore": "",
+      "Course": "Department of Linguistics and Translation",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language; X1.5: Chinese Language",
+      "Remarks": "",
+      "intake": [
+        36,
+        37,
+        36
+      ],
+      "OutBandAIntake": [
+        4,
+        1,
+        6
+      ],
+      "ApplyAmount": [
+        4280,
+        3513,
+        3210
+      ],
+      "BandAApplyAmount": [
+        524,
+        342,
+        313
+      ]
+    },
+    {
+      "Code": "JS1106",
+      "Method": "Best 5",
+      "UQScore": "",
+      "MedianScore": 21,
+      "LQScore": 21,
+      "LowestScore": "",
+      "Course": "Department of Media and Communication",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "",
+      "Remarks": "",
+      "intake": [
+        43,
+        43,
+        32
+      ],
+      "OutBandAIntake": [
+        2,
+        0,
+        4
+      ],
+      "ApplyAmount": [
+        6310,
+        5079,
+        4105
+      ],
+      "BandAApplyAmount": [
+        767,
+        587,
+        483
+      ]
+    },
+    {
+      "Code": "JS1108",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 30.5,
+      "LQScore": 30,
+      "LowestScore": "",
+      "Course": "BSocSc Public Policy and Politics",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language; X1.5: Liberal Studies",
+      "Remarks": "",
+      "intake": [
+        68,
+        68,
+        67
+      ],
+      "OutBandAIntake": [
+        11,
+        1,
+        16
+      ],
+      "ApplyAmount": [
+        3519,
+        4932,
+        3065
+      ],
+      "BandAApplyAmount": [
+        467,
+        836,
+        289
+      ]
+    },
+    {
+      "Code": "JS1201",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 29,
+      "LQScore": 28,
+      "LowestScore": "",
+      "Course": "Department of Architecture and Civil Engineering",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "N",
+      "Interview": "N",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Combined Science (Biology and Physics) Combined Science (Chemistry and Physics) Integrated Science Physics",
+      "ReqSub":"Physics//Integrated Science//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)",
+      "Weighting": "X2: English Language; X1.5: Mathematics(Core)",
+      "Remarks": "",
+      "intake": [
+        108,
+        121,
+        111,
+        118
+      ],
+      "OutBandAIntake": [
+        11,
+        8,
+        14,
+        15
+      ],
+      "ApplyAmount": [
+        6687,
+        4685,
+        4252,
+        3604
+      ],
+      "BandAApplyAmount": [
+        987,
+        701,
+        692,
+        574
+      ]
+    },
+    {
+      "Code": "JS1202",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 35,
+      "LQScore": 34,
+      "LowestScore": "",
+      "Course": "BSc Chemistry",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Chemistry Combined Science (Biology and Chemistry) Combined Science (Chemistry and Physics)",
+      "ReqSub":"Chemistry//Combined Science (Physics + Chemistry)//Combined Science (Chemistry + Biology)",
+      "Weighting": "X2: English Language, Chemistry; X1.5: Mathematics(Core), Biology, Combined Science, Physics",
+      "Remarks": "",
+      "intake": [
+        83,
+        106,
+        46,
+        44
+      ],
+      "OutBandAIntake": [
+        8,
+        20,
+        8,
+        8
+      ],
+      "ApplyAmount": [
+        6073,
+        4501,
+        2869,
+        2570
+      ],
+      "BandAApplyAmount": [
+        915,
+        698,
+        284,
+        293
+      ]
+    },
+    {
+      "Code": "JS1203",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 38,
+      "LQScore": 37,
+      "LowestScore": "",
+      "Course": "Department of Biomedical Sciences",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "Elective1: Level 3 in one elective subject from: Biology Chemistry Combined Science; Elective2: Level 3 in one elective subject from: Biology Business, Accounting and Financial Studies (Accounting or Business Management) Chemistry Design and Applied Technology Information and Communication Technology M1/M2 Physics Science (Combined or Integrated)",
+      "ReqSub":"Biology//Chemistry//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)//Combined Science (Chemistry + Biology)[AND]Biology//Business, Accounting and Financial Studies//Chemistry//Design and Applied Technology//Information and Communication Technology//Mathematics M1/M2//Physics//Combined Science (Physics + Biology)/Combined Science (Physics + Chemistry)//Combined Science (Chemistry + Biology)//Integrated Science",
+      "Weighting": "X2: English Language, Biology, Chemistry, Combined Science, Physics; X1.5: Mathematics(Core), Business, Accounting and Financial Studies (Accounting or Business Management), Design and Applied Technology, Information and Communication Technology, Integrated Science, M1/M2",
+      "Remarks": "",
+      "intake": [
+        39,
+        84,
+        81
+      ],
+      "OutBandAIntake": [
+        12,
+        10,
+        15
+      ],
+      "ApplyAmount": [
+        3568,
+        4032,
+        3589
+      ],
+      "BandAApplyAmount": [
+        332,
+        498,
+        423
+      ]
+    },
+    {
+      "Code": "JS1204",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 27,
+      "LQScore": 27,
+      "LowestScore": "",
+      "Course": "BSc Computer Science",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Biology Chemistry Combined Science Information and Communication Technology M1/M2 Physics",
+      "ReqSub":"Mathematics M1/M2//Biology//Chemistry//Physics//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)//Combined Science (Chemistry + Biology)//Information and Communication Technology",
+      "Weighting": "X2: English Language",
+      "Remarks": "",
+      "intake": [
+        82,
+        86,
+        86,
+        87
+      ],
+      "OutBandAIntake": [
+        2,
+        7,
+        5,
+        9
+      ],
+      "ApplyAmount": [
+        4399,
+        4618,
+        3526
+      ],
+      "BandAApplyAmount": [
+        912,
+        1240,
+        823
+      ]
+    },
+    {
+      "Code": "JS1205",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 36,
+      "LQScore": 35,
+      "LowestScore": "",
+      "Course": "Department of Electronic Engineering",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Biology Chemistry Combined Science Integrated Science Information and Communication Technology M1/M2 Physics",
+      "ReqSub":"Mathematics M1/M2//Biology//Chemistry//Physics//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)//Combined Science (Chemistry + Biology)//Information and Communication Technology//Integrated Science",
+      "Weighting": "X2: English Language, Mathematics(Core), Combined Science (Physics and Biology), Combined Science (Physics and Chemistry), Information and Communication Technology, M1/M2, Physics; X1.5: Biology, Chemistry, Combined Science (Biology and Chemistry), Integrated Science",
+      "Remarks": "",
+      "intake": [
+        180,
+        157,
+        160,
+        167
+      ],
+      "OutBandAIntake": [
+        21,
+        16,
+        30,
+        18
+      ],
+      "ApplyAmount": [
+        5877,
+        5114,
+        3944,
+        3868
+      ],
+      "BandAApplyAmount": [
+        1471,
+        1179,
+        902,
+        854
+      ]
+    },
+    {
+      "Code": "JS1206",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 38,
+      "LQScore": 36.5,
+      "LowestScore": "",
+      "Course": "BSc Computing Mathematics",
+      "MinLevelRequired": 333233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Biology Business, Accounting and Financial Studies (Accounting or Business Management) Chemistry Design and Applied Technology Information and Communication Technology M1/M2 Physics Science (Combined or Integrated)",
+      "ReqSub":"Mathematics M1/M2//Biology//Business, Accounting and Financial Studies//Chemistry//Design and Applied Technology//Physics//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)//Combined Science (Chemistry + Biology)//Information and Communication Technology//Integrated Science",
+      "Weighting": "X2.5: Mathematics(Core); X2: English Language, M1/M2; X1.5: Biology, Chemistry, Combined Science, Physics",
+      "Remarks": "",
+      "intake": [
+        30,
+        44,
+        34,
+        35
+      ],
+      "OutBandAIntake": [
+        8,
+        6,
+        8,
+        10
+      ],
+      "ApplyAmount": [
+        2879,
+        2805,
+        2024,
+        1833
+      ],
+      "BandAApplyAmount": [
+        282,
+        473,
+        249,
+        214
+      ]
+    },
+    {
+      "Code": "JS1207",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 38,
+      "LQScore": 37,
+      "LowestScore": "",
+      "Course": "Department of Mechanical Engineering",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Biology Chemistry Combined Science Physics",
+      "ReqSub":"Biology//Chemistry//Physics//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)//Combined Science (Chemistry + Biology)",
+      "Weighting": "X2: English Language, Mathematics(core), Biology, Chemistry, Combined Science, Physics",
+      "Remarks": "",
+      "intake": [
+        108,
+        110,
+        85,
+        122
+      ],
+      "OutBandAIntake": [
+        24,
+        10,
+        11,
+        23
+      ],
+      "ApplyAmount": [
+        4653,
+        4082,
+        3431,
+        3148
+      ],
+      "BandAApplyAmount": [
+        767,
+        670,
+        456,
+        451
+      ]
+    },
+    {
+      "Code": "JS1208",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 30.5,
+      "LQScore": 30,
+      "LowestScore": "",
+      "Course": "BSc Applied Physics",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Chemistry Combined Science (Biology and Physics) Combined Science (Chemistry and Physics) Design and Applied Technology Physics",
+      "ReqSub":"Chemistry//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)//Design and Applied Technology//Physics",
+      "Weighting": "X2: English Language, Physics; X1.5: M1/M2; X1.25: Mathematics(Core)",
+      "Remarks": "",
+      "intake": [
+        68,
+        68,
+        65,
+        33
+      ],
+      "OutBandAIntake": [
+        22,
+        16,
+        21,
+        10
+      ],
+      "ApplyAmount": [
+        2988,
+        2908,
+        2284,
+        1808
+      ],
+      "BandAApplyAmount": [
+        279,
+        425,
+        245,
+        156
+      ]
+    },
+    {
+      "Code": "JS1210",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": 29,
+      "LQScore": 29,
+      "LowestScore": "",
+      "Course": "BEng Materials Science and Engineering",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Chemistry Combined Science (Biology and Physics) Combined Science (Chemistry and Physics) Design and Applied Technology Physics",
+      "ReqSub":"Chemistry//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)//Design and Applied Technology//Physics",
+      "Weighting": "X2: English Language, Physics; X1.5: Chemistry, M1/M2",
+      "Remarks": "",
+      "intake": [
+        32
+      ],
+      "OutBandAIntake": [
+        18
+      ],
+      "ApplyAmount": [
+        1215
+      ],
+      "BandAApplyAmount": [
+        90
+      ]
+    },
+    {
+      "Code": "JS1211",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": "N/A(New Program)",
+      "LQScore": "N/A(New Program)",
+      "LowestScore": "",
+      "Course": "BEng Biomedical Engineering",
+      "MinLevelRequired": 332233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "Level 3 in one elective subject from: Biology Chemistry Combined Science Physics",
+      "ReqSub":"Biology//Chemistry//Combined Science (Physics + Biology)//Combined Science (Physics + Chemistry)//Combined Science (Chemistry + Biology)//Physics",
+      "Weighting": "X2: English Language, Mathematics(core), Biology, Chemistry, Combined Science, Physics",
+      "Remarks": "",
+      "intake": "N/A(New Program)",
+      "OutBandAIntake": "N/A(New Program)",
+      "ApplyAmount": "N/A(New Program)",
+      "BandAApplyAmount": "N/A(New Program)"
+    },
+    {
+      "Code": "JS1801",
+      "Method": "4C2X",
+      "UQScore": "",
+      "MedianScore": "N/A(New Program)",
+      "LQScore": "N/A(New Program)",
+      "LowestScore": "",
+      "Course": "Bachelor of Veterinary Medicine",
+      "MinLevelRequired": 353233,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "Level 3 in Chemistry",
+      "ReqSub":"Chemistry",
+      "Weighting": "",
+      "Remarks": "",
+      "intake": "N/A(New Program)",
+      "OutBandAIntake": "N/A(New Program)",
+      "ApplyAmount": "N/A(New Program)",
+      "BandAApplyAmount": "N/A(New Program)"
+    },
+    {
+      "Code": "JS1091",
+      "Method": "2L3B",
+      "UQScore": "",
+      "MedianScore": 17,
+      "LQScore": 15,
+      "LowestScore": "",
+      "Course": "Asc Division of Building Science and Technology",
+      "MinLevelRequired": 22222,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "Y",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language",
+      "Remarks": "",
+      "intake": [
+        320,
+        1000,
+        1100,
+        950,
+        1050,
+        1419,
+        1800
+      ],
+      "OutBandAIntake": [
+        0,
+        4,
+        0,
+        166,
+        320,
+        774,
+        1112
+      ],
+      "ApplyAmount": [
+        11435,
+        13484,
+        12206,
+        8428,
+        6515,
+        5091,
+        4608
+      ],
+      "BandAApplyAmount": [
+        2735,
+        3310,
+        3132,
+        2109,
+        1519,
+        1048,
+        1120
+      ]
+    },
+    {
+      "Code": "JS1093",
+      "Method": "2L3B",
+      "UQScore": "",
+      "MedianScore": 19,
+      "LQScore": 17,
+      "LowestScore": "",
+      "Course": "ASc Architectural Studies",
+      "MinLevelRequired": 22222,
+      "M1M2": "Y",
+      "CategroyC_Subjects": "Y",
+      "Interview": "N",
+      "SubjectRequirenment": "",
+      "ReqSub":"",
+      "Weighting": "X2: English Language",
+      "Remarks": "",
+      "intake": [
+        115,
+        260,
+        338,
+        295
+      ],
+      "OutBandAIntake": [
+        0,
+        0,
+        67,
+        13
+      ],
+      "ApplyAmount": [
+        6321,
+        5321,
+        4129,
+        3728
+      ],
+      "BandAApplyAmount": [
+        1112,
+        869,
+        676,
+        820
+      ]
+    }
+  ]
+}

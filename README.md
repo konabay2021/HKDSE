@@ -6,7 +6,7 @@
 
 ## Live Application URL
 
-https://case2018.github.io/HKDSE/
+https://konabay2021.github.io/HKDSE/
 
 ## Prerequisites
 

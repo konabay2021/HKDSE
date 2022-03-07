@@ -19,7 +19,7 @@ const Home = () => {
                             </div>
 
                             <ul>
-                                <li><Link to={`${process.env.PUBLIC_URL}/tutorial`} className="link gray ">Tutorial</Link></li>
+                                {/* <li><Link to={`${process.env.PUBLIC_URL}/tutorial`} className="link gray ">Tutorial</Link></li> */}
                                 <li><Link to={`${process.env.PUBLIC_URL}/input`} className="link gray">Input</Link></li>
                                 <li><Link to={`${process.env.PUBLIC_URL}/resources`} className="link gray">Resources</Link></li>
                             </ul>
@@ -97,7 +97,7 @@ const Home = () => {
                             </div>
                         </div>
                         <ul >
-                            <li><Link to={`${process.env.PUBLIC_URL}/tutorial`} className="link gray ">Tutorial</Link></li>
+                            {/* <li><Link to={`${process.env.PUBLIC_URL}/tutorial`} className="link gray ">Tutorial</Link></li> */}
                             <li><Link to={`${process.env.PUBLIC_URL}/input`} className="link gray">Input</Link></li>
                             <li><Link to={`${process.env.PUBLIC_URL}/resources`} className="link gray">Resources</Link></li>
                         </ul>

@@ -349,8 +349,8 @@ class Result extends Component {
                             <p>Your Position: <strong>{this.findPosition()}</strong> out of 21262 (In terms of Best 5 Subjects, neglecting subject weighting) </p>
                             <br />
                             <p>Quick Fact: </p>
-                            <p>1) There are <strong>16,538</strong> Bachelor's Degree Programmes (include OUHK and SSSDP) available in JUPAS in 2018</p>
-                            <p>2) There are <strong>3,581</strong> Associate Degree / Higher Diploma Programmes available in JUPAS in 2018</p>
+                            <p>1) There are <strong>16,538</strong> Bachelor's Degree Programmes (include OUHK and SSSDP) available in JUPAS in 2021</p>
+                            <p>2) There are <strong>3,581</strong> Associate Degree / Higher Diploma Programmes available in JUPAS in 2021</p>
                         </div>
                     </div>
 

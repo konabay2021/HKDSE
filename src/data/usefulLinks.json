@@ -2,6 +2,14 @@
     "usefulLinks": {
         "HKEAA Press Release": [
             {
+                "name": "2021 Hong Kong Diploma of Secondary Education Examination Results Released",
+                "url": "https://www.hkeaa.edu.hk/DocLibrary/Media/PR/DSE21_Press_Release_Eng.pdf"
+            },
+            {
+                "name": "2020 Hong Kong Diploma of Secondary Education Examination Results Released",
+                "url": "https://www.hkeaa.edu.hk/DocLibrary/Media/PR/DSE20_Press_Release_Eng.pdf"
+            },
+            {
                 "name": "2019 Hong Kong Diploma of Secondary Education Examination Results Released",
                 "url": "http://www.hkeaa.edu.hk/DocLibrary/Media/PR/DSE19_Press_Release_Eng.pdf"
             },
@@ -19,6 +27,10 @@
             }
         ],
         "HKDSE Cut-off Score (All Subjects)": [
+            {
+                "name":"2019 - 2021",
+                "url":"http://dse00.blogspot.com/p/core-cutoff.html"
+            },
             {
                 "name":"2018",
                 "url":"http://lsforum.net/board/viewthread.php?tid=285376"

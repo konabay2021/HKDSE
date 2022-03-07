@@ -22,7 +22,8 @@ const listTemplate = (props) => {
                                 <Link className="link" to={{
                                     pathname: `${process.env.PUBLIC_URL}/${page}/${e}`,
                                 }}
-                                ><p>{e}</p></Link>
+                                ><p>{e}</p>
+                                </Link>
                             </li>
                         )
                     })}

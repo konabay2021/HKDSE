@@ -26,7 +26,7 @@ const NavBar = () => {
                 <div className="container" id="container">
                     <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/`} className="logoLink"><h6 className="logo displayNone" >HKDSE E-Learning Platform</h6></Link>
                     <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/`} className="link">Home</Link>
-                    <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/tutorial`} className="link">Tutorial</Link>
+                    {/* <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/tutorial`} className="link">Tutorial</Link> */}
                     <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/input`} className="link">Input</Link>
                     <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/resources`} className="link">Resources</Link>
                     {/* <Link onClick={hideList} to={`${process.env.PUBLIC_URL}/qa`} className="link" >QA</Link>
